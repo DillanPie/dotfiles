@@ -1,9 +1,0 @@
-{
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'FiraCode Nerd Font'",
-    "lldb.suppressUpdateNotifications": true,
-    "explorer.confirmDelete": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true
-}

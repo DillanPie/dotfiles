@@ -1,6 +1,0 @@
-2025-03-11 09:42:02.549 [info] Log level: Info
-2025-03-11 09:42:02.822 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
-2025-03-11 09:42:13.225 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for DillanPie/Webpage#: Error: No GitHub authentication session available.
-2025-03-11 09:58:56.101 [info] Log level: Info
-2025-03-11 09:58:56.189 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
-2025-03-13 16:15:42.130 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for DillanPie/Webpage#: Error: No GitHub authentication session available.

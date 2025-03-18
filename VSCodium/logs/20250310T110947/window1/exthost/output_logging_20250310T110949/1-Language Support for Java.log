@@ -1,4 +1,0 @@
-Mar 10, 2025 11:09:51 AM org.apache.aries.spifly.BaseActivator log
-INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic
-Mar 10, 2025 11:09:51 AM org.apache.aries.spifly.BaseActivator log
-INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic

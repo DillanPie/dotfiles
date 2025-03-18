@@ -1,8 +1,0 @@
-2025-03-16 15:20:06.047 [info] Marked extension as removed jdinhlife.gruvbox-1.24.5
-2025-03-16 15:20:06.049 [info] Marked extension as removed vadimcn.vscode-lldb-1.11.3
-2025-03-16 15:20:06.053 [info] Deleted marked for removal extension from disk jdinhlife.gruvbox /home/dillan/.vscode-oss/extensions/jdinhlife.gruvbox-1.24.5-universal
-2025-03-16 17:59:24.048 [info] Getting Manifest... ritwickdey.liveserver
-2025-03-16 17:59:24.766 [info] Installing extension: ritwickdey.liveserver {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/dillan/.vscode-oss/extensions/extensions.json","path":"/home/dillan/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.97.0","date":"2025-02-06T19:54:45.711Z"}}
-2025-03-16 17:59:27.571 [info] Extracted extension to file:///home/dillan/.vscode-oss/extensions/ritwickdey.liveserver-5.7.9-universal: ritwickdey.liveserver
-2025-03-16 17:59:27.679 [info] Renamed to /home/dillan/.vscode-oss/extensions/ritwickdey.liveserver-5.7.9-universal
-2025-03-16 17:59:27.694 [info] Extension installed successfully: ritwickdey.liveserver vscode-userdata:/home/dillan/.vscode-oss/extensions/extensions.json
