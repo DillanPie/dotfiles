@@ -1,0 +1,15 @@
+# Minimum version of CMake required
+cmake_minimum_required(VERSION 3.10)
+
+# Project name and version
+project(FileProcessor VERSION 1.0)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add the executable target
+add_executable(MusicPlayer main.cpp Playlist.cpp Song.cpp)
+
+# Optionally, if you want to include debugging symbols:
+# set(CMAKE_BUILD_TYPE Debug)

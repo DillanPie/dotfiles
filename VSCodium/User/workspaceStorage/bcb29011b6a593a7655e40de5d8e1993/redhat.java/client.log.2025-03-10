@@ -1,0 +1,74 @@
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2025-03-10 11:09:49.916'
+}
+{
+  message: 'Starting Java server with: /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/jre/21.0.5-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/lombok/lombok-1.18.34.jar -jar /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/dillan/.config/VSCodium/User/globalStorage/redhat.java/1.39.0/config_ss_linux -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2025-03-10 11:09:49.949'
+}
+{
+  message: 'Starting Java server with: /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/jre/21.0.5-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/lombok/lombok-1.18.34.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/dillan/.config/VSCodium/User/globalStorage/redhat.java/1.39.0/config_linux -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2025-03-10 11:09:50.251'
+}
+{
+  message: 'Mar 10, 2025 11:09:51 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-03-10 11:09:51.509'
+}
+{
+  message: 'Mar 10, 2025 11:09:51 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-03-10 11:09:51.514'
+}
+{
+  message: '[Error - 11:09:52 AM] Mar 10, 2025, 11:09:52 AM An internal error occurred during: "Initialize After Load".\n' +
+    'Cannot invoke "org.osgi.framework.Bundle.start(int)" because the return value of "org.eclipse.core.runtime.Platform.getBundle(String)" is null\n' +
+    'java.lang.NullPointerException: Cannot invoke "org.osgi.framework.Bundle.start(int)" because the return value of "org.eclipse.core.runtime.Platform.getBundle(String)" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.BundleUtils.startBundle(BundleUtils.java:360)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:196)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-03-10 11:09:52.909'
+}
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2025-03-10 11:11:36.134'
+}
+{
+  message: 'Starting Java server with: /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/jre/21.0.5-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/lombok/lombok-1.18.34.jar -jar /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/dillan/.config/VSCodium/User/globalStorage/redhat.java/1.39.0/config_ss_linux -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2025-03-10 11:11:36.168'
+}
+{
+  message: 'Starting Java server with: /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/jre/21.0.5-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/lombok/lombok-1.18.34.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/dillan/.config/VSCodium/User/globalStorage/redhat.java/1.39.0/config_linux -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2025-03-10 11:11:36.470'
+}
+{
+  message: 'Mar 10, 2025 11:11:37 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-03-10 11:11:37.709'
+}
+{
+  message: 'Mar 10, 2025 11:11:37 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-03-10 11:11:37.713'
+}
+{
+  message: '[Error - 11:11:38 AM] Mar 10, 2025, 11:11:38 AM An internal error occurred during: "Initialize After Load".\n' +
+    'Cannot invoke "org.osgi.framework.Bundle.start(int)" because the return value of "org.eclipse.core.runtime.Platform.getBundle(String)" is null\n' +
+    'java.lang.NullPointerException: Cannot invoke "org.osgi.framework.Bundle.start(int)" because the return value of "org.eclipse.core.runtime.Platform.getBundle(String)" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.BundleUtils.startBundle(BundleUtils.java:360)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:196)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-03-10 11:11:38.916'
+}

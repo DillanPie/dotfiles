@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "/home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/.0d5836eeaef093f49b947756e01803333e980274-audit.json",
+    "files": [
+        {
+            "date": 1741619389862,
+            "name": "/home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/client.log.2025-03-10",
+            "hash": "cd4a97632c87b7a32d9a507631fe9a0e72f02dc2876e08243d52d199c90b970f"
+        }
+    ],
+    "hashType": "sha256"
+}

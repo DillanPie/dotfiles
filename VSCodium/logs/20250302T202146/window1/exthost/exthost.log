@@ -1,0 +1,28 @@
+2025-03-02 20:21:48.075 [info] Extension host with pid 561646 started
+2025-03-02 20:21:48.075 [info] Skipping acquiring lock for /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993.
+2025-03-02 20:21:48.194 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-02 20:21:48.211 [info] ExtensionService#_doActivateExtension redhat.java, startup: false, activationEvent: 'onLanguage:java'
+2025-03-02 20:21:48.384 [warning] [redhat.java] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[java]', provide the URI of a resource or 'null' for any resource.
+2025-03-02 20:21:48.415 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-02 20:21:48.417 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2025-03-02 20:21:48.465 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-02 20:21:48.531 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-02 20:21:48.573 [warning] [redhat.java] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[java]', provide the URI of a resource or 'null' for any resource.
+2025-03-02 20:21:48.597 [info] Eager extensions activated
+2025-03-02 20:21:48.621 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:48.624 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:48.641 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:48.643 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:48.715 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished', root cause: franneck94.vscode-c-cpp-config
+2025-03-02 20:21:48.728 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:48.745 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:48.917 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 20:21:50.959 [error] [redhat.java] provider FAILED
+2025-03-02 20:21:50.962 [error] Error: The request (id: 3, method: 'textDocument/documentSymbol') has been cancelled
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1066478
+	at re (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1066772)
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1061556
+	at Immediate.<anonymous> (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1061576)
+	at process.processImmediate (node:internal/timers:483:21)
+2025-03-02 20:22:41.801 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-02 20:22:41.812 [info] Extension host with pid 561646 exiting with code 0

@@ -1,0 +1,3 @@
+cmake_minimum_required(VERSION 3.10) # Minimum required CMake version
+project(MyProject) # Project name
+add_executable(my_executable chat.cpp) # Create executable

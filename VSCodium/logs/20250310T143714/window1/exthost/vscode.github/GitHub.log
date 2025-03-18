@@ -1,0 +1,2 @@
+2025-03-10 14:37:18.007 [info] Log level: Info
+2025-03-10 16:58:20.512 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for DillanPie/Webpage#: Error: No GitHub authentication session available.

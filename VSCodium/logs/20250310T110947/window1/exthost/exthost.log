@@ -1,0 +1,59 @@
+2025-03-10 11:09:49.269 [info] Extension host with pid 244343 started
+2025-03-10 11:09:49.269 [info] Skipping acquiring lock for /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993.
+2025-03-10 11:09:49.556 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-10 11:09:49.592 [info] ExtensionService#_doActivateExtension redhat.java, startup: false, activationEvent: 'onLanguage:java'
+2025-03-10 11:09:49.928 [warning] [redhat.java] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[java]', provide the URI of a resource or 'null' for any resource.
+2025-03-10 11:09:49.992 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-10 11:09:49.995 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2025-03-10 11:09:50.070 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-10 11:09:50.190 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-10 11:09:50.237 [warning] [redhat.java] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[java]', provide the URI of a resource or 'null' for any resource.
+2025-03-10 11:09:50.333 [info] Eager extensions activated
+2025-03-10 11:09:50.377 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:50.381 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:50.414 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:50.417 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:50.549 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished', root cause: franneck94.vscode-c-cpp-config
+2025-03-10 11:09:50.576 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:50.600 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:50.912 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-03-10 11:09:54.458 [error] [redhat.java] provider FAILED
+2025-03-10 11:09:54.462 [error] Error: The request (id: 1, method: 'textDocument/documentSymbol') has been cancelled
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1066478
+	at re (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1066772)
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1061556
+	at Immediate.<anonymous> (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1061576)
+	at process.processImmediate (node:internal/timers:483:21)
+2025-03-10 11:09:54.463 [error] [redhat.java] provider FAILED
+2025-03-10 11:09:54.463 [error] Error: The request (id: 2, method: 'textDocument/documentSymbol') has been cancelled
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1066478
+	at re (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1066772)
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1061556
+	at Immediate.<anonymous> (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1061576)
+	at process.processImmediate (node:internal/timers:483:21)
+2025-03-10 11:09:54.501 [error] [redhat.java] provider FAILED
+2025-03-10 11:09:54.501 [error] Error: selectionRange must be contained in fullRange
+	at Zd.validate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:35889)
+	at new Zd (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:36097)
+	at G (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1241091)
+	at c (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1279607)
+	at t.map (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1279693)
+	at Object.asDocumentSymbols (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1249147)
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:943219
+	at Generator.next (<anonymous>)
+	at s (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:942275)
+	at runNextTicks (node:internal/process/task_queues:60:5)
+	at process.processImmediate (node:internal/timers:454:9)
+2025-03-10 11:09:54.502 [error] [redhat.java] provider FAILED
+2025-03-10 11:09:54.502 [error] Error: selectionRange must be contained in fullRange
+	at Zd.validate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:35889)
+	at new Zd (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:36097)
+	at G (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1241091)
+	at c (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1279607)
+	at t.map (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1279693)
+	at Object.asDocumentSymbols (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:1249147)
+	at /home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:943219
+	at Generator.next (<anonymous>)
+	at s (/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/dist/extension.js:2:942275)
+2025-03-10 11:10:09.130 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-10 11:10:09.149 [info] Extension host with pid 244343 exiting with code 0
