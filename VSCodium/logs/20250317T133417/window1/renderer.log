@@ -1,0 +1,62 @@
+2025-03-17 13:34:17.934 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'attributableCoverage' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-17 13:34:17.934 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-17 13:34:17.935 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.debugpy' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-17 13:34:17.935 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'redhat.java' wants API proposal 'documentPaste' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-17 13:34:18.664 [info] Started local extension host with pid 4364.
+2025-03-17 13:34:21.649 [info] [perf] Render performance baseline is 39ms
+2025-03-17 13:34:27.184 [error] Error: The editor could not be opened because the file was not found.
+    at rbe.handleSetInputError (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2107:138504)
+    at async rbe.setInput (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2107:137516)
+    at async P2e.doSetInput (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:526:25289)
+    at async P2e.doOpenEditor (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:526:23043)
+    at async P2e.openEditor (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:526:21970)
+    at async vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:638:31972
+    at async r (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:530:57528)
+2025-03-17 13:35:39.703 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 13:35:42.652 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 13:38:04.078 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 13:38:05.578 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 13:38:07.271 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 13:38:08.463 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 13:38:09.991 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:21:50.252 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:23:30.675 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:23:32.828 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:23:54.420 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:23:56.176 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:24:00.513 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:24:01.561 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:24:58.088 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:25:03.197 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:25:49.049 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:25:52.662 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:25:56.867 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:25:57.915 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:25:59.229 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:26:00.698 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:26:04.076 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:26:09.852 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:26:20.655 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:26:52.834 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:27:22.844 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:27:25.521 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:27:26.951 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:28:15.476 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:29:21.073 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:29:23.143 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:29:24.960 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:29:26.457 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:30:08.425 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:30:14.810 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:30:19.033 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:30:20.606 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:30:35.651 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:31:26.237 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:31:52.679 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:31:54.253 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:31:55.830 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:32:19.601 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:32:21.064 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:32:22.246 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 15:32:28.366 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-17 16:33:07.870 [error] An unknown error occurred. Please consult the log for more details.

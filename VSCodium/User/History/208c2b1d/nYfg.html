@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://mshaugh.github.io/nerdfont-webfonts/build/firacode-nerd-font.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            color: #ddc7a1;
+            font-family: "JetBrainsMono Nerd Font";
+            background-color: #282828;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: #32302f;
+            padding: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 60rem;
+            margin: 5vh auto;
+            padding: 2rem;
+            background-color: #32302f;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .link-card {
+            background: #1d2021;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #d8a657;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-card:hover {
+            background: #fb4934;
+            transform: translateY(-5px);
+            color: #ffffff;
+        }
+
+        .footer {
+            margin-top: 5vh;
+            padding: 1.2rem;
+            background: #32302f;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: auto;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 5px solid #d8a657;
+            object-fit: contain;
+
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</head>
+<body onload="showSlides()">
+    <div class="header">My Portfolio</div>
+
+    <div class="container">
+        <h1 class="title">Welcome to My Portfolio</h1>
+        <p class="subtitle">Aspiring Security Expert | Tech Enthusiast</p>
+        
+        <p>Hi, I'm Dillan! I specialize in cybersecurity, programming, linux system administration and problem-solving.</p>
+        
+        <div class="links">
+            <a class="link-card" href="https://github.com">GitHub</a>
+            <a class="link-card" href="https://www.linkedin.com">LinkedIn</a>
+            <a class="link-card" href="https://www.youtube.com">YouTube</a>
+            <a class="link-card" href="https://mail.google.com">Email</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 class="subtitle">Photo Slideshow</h1>
+        <div class="slideshow-container">
+            <img class="slide" src="Photos/photo1.jpg" alt="Side View dock">
+            <img class="slide" src="Photos/photo2.jpg" alt="Spring Formal">
+            <img class="slide" src="Photos/photo3.jpg" alt="Helicopter">
+            <img class="slide" src="Photos/photo4.jpg" alt="Lenny's">
+            <img class="slide" src="Photos/photo5.jpg" alt="Mountain">
+            <img class="slide" src="Photos/photo6.jpg" alt="Lost River">
+            <img class="slide" src="Photos/photo7.jpg" alt="Greek Restaurant">
+            <img class="slide" src="Photos/photo8.jpg" alt="Italian Express">
+            <img class="slide" src="Photos/photo9.jpg" alt="Proposal Richmond">
+            <img class="slide" src="Photos/photo10.jpg" alt="Cute Pose">
+        </div>
+    </div>
+
+    <div class="footer">© 2025 [Dillan Suon]. All Rights Reserved.</div>
+</body>
+</html>

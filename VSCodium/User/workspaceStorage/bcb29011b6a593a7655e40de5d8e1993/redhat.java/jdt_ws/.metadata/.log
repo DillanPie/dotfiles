@@ -1,0 +1,1140 @@
+!SESSION 2025-02-18 20:08:22.518 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-fa11adcdf4115a365e625b4816abf46f.sock
+Command-line arguments:  -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-fa11adcdf4115a365e625b4816abf46f.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:25.816
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:25.951
+!MESSAGE Started org.eclipse.buildship.core 78ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:25.952
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:26.303
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:26.460
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:26.467
+!MESSAGE Initializing Java Language Server 1.44.0.202501220510
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.370
+!MESSAGE ProjectRegistryRefreshJob finished 2417ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.540
+!MESSAGE Setting /usr/lib/jvm/java-11-openjdk as 'JavaSE-11' environment (id:1739927308517)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.545
+!MESSAGE Setting java.home /usr/lib/jvm/java-11-openjdk as default global VM
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.552
+!MESSAGE Default VM Install changed from  1739927308497-/home/dillan/.vscode-oss/extensions/redhat.java-1.39.0-linux-x64/jre/21.0.5-linux-x86_64 to 1739927308517-/usr/lib/jvm/java-11-openjdk
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.561
+!MESSAGE JVM Runtimes changed, saving new configuration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.569
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.569
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.588
+!MESSAGE RepositoryRegistryUpdateJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.613
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.637
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:28.774
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:29.845
+!MESSAGE Try to create an invisible project for the workspace /home/dillan/OneDrive_dsuon/VSCode/240 project2
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:29.846
+!MESSAGE Creating the Java project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:29.859
+!MESSAGE Finished creating the Java project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:29.865
+!MESSAGE Successfully created a workspace invisible project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:29.885
+!MESSAGE Workspace initialized in 1297ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:29.919
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:30.415
+!MESSAGE >> Updating classpath for project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:30.446
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:30.447
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:30.453
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:30.780
+!MESSAGE Reconciled 3. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.494
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.496
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.537
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.537
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.571
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.571
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:31.572
+!MESSAGE Validated 3. Took 141 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:36.006
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:36.010
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:36.493
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:36.493
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:36.494
+!MESSAGE Validated 1. Took 33 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:37.767
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:37.770
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:38.270
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:38.271
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:08:38.271
+!MESSAGE Validated 1. Took 50 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:02.726
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:02.730
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:03.208
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:03.209
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:03.209
+!MESSAGE Validated 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:07.650
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:07.652
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:08.145
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:08.146
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:08.146
+!MESSAGE Validated 1. Took 43 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:11.396
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:11.870
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:11.871
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:11.871
+!MESSAGE Validated 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:12.884
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:13.372
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:13.372
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:13.373
+!MESSAGE Validated 1. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:14.338
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:14.824
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:14.825
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:14.825
+!MESSAGE Validated 1. Took 34 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:15.766
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:16.244
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:16.244
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:16.244
+!MESSAGE Validated 1. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:40.442
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:47.337
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:47.815
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:47.816
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:47.841
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:47.841
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:09:47.842
+!MESSAGE Validated 2. Took 53 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:03.511
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:03.943
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:03.944
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:03.944
+!MESSAGE Validated 1. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:05.241
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:05.716
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:05.717
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:05.717
+!MESSAGE Validated 1. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:16.010
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:16.480
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:16.480
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:16.481
+!MESSAGE Validated 1. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:17.761
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:18.244
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:18.244
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:18.245
+!MESSAGE Validated 1. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:34.412
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:34.891
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:34.892
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:34.893
+!MESSAGE Validated 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:35.634
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:36.111
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:36.112
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:36.112
+!MESSAGE Validated 1. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:36.794
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:37.263
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:37.264
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:37.264
+!MESSAGE Validated 1. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:38.210
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:38.686
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:38.686
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:38.687
+!MESSAGE Validated 1. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:39.531
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:40.010
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:40.010
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 20:10:40.011
+!MESSAGE Validated 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 21:11:11.150
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 21:11:11.152
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 21:11:11.166
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-02-18 21:11:11.169
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2025-03-02 18:37:13.293 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-c9bfb62a7d2d7d5627b1752121090355.sock
+Command-line arguments:  -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-c9bfb62a7d2d7d5627b1752121090355.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:15.256
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:15.332
+!MESSAGE Started org.eclipse.buildship.core 51ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:15.333
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:15.533
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:15.565
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:15.567
+!MESSAGE Initializing Java Language Server 1.44.0.202501220510
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:16.079
+!MESSAGE ProjectRegistryRefreshJob finished 745ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:16.154
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:16.155
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:16.178
+!MESSAGE RepositoryRegistryUpdateJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:16.181
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.071
+!MESSAGE Workspace initialized in 894ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.077
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.492
+!MESSAGE >> Updating classpath for project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.521
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.521
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.523
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:17.631
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:18.351
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:18.352
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:37:18.356
+!MESSAGE Validated 1. Took 72 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:41.498
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:41.501
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:41.989
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:41.990
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:41.990
+!MESSAGE Validated 1. Took 38 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:53.585
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:53.587
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:54.070
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:54.071
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:39:54.072
+!MESSAGE Validated 1. Took 34 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:40:12.012
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:40:12.030
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:40:12.509
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:40:12.510
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 18:40:12.510
+!MESSAGE Validated 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 19:32:38.139
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 19:32:38.569
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 19:32:38.569
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 19:32:38.570
+!MESSAGE Validated 1. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:14:39.590
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:14:39.592
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:14:39.620
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:14:39.625
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2025-03-02 20:21:48.828 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-e148a39c7583d47f051c55881faec906.sock
+Command-line arguments:  -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-e148a39c7583d47f051c55881faec906.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:50.633
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:50.709
+!MESSAGE Started org.eclipse.buildship.core 49ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:50.709
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:50.833
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:50.889
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:50.890
+!MESSAGE Initializing Java Language Server 1.44.0.202501220510
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:51.681
+!MESSAGE ProjectRegistryRefreshJob finished 970ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:51.782
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:51.782
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:51.800
+!MESSAGE RepositoryRegistryUpdateJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:51.804
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:52.532
+!MESSAGE Workspace initialized in 732ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:52.539
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:52.903
+!MESSAGE >> Updating classpath for project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:52.922
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:52.922
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:52.924
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:53.261
+!MESSAGE Reconciled 2. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:53.959
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:53.961
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:54.002
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:54.002
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:21:54.003
+!MESSAGE Validated 2. Took 91 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:10.916
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:11.394
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:11.394
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:11.395
+!MESSAGE Validated 1. Took 27 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:41.811
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:41.812
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:41.833
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:41.838
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2025-03-02 20:22:57.851 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-ce0ef9ccc16e818b4b7b6336b37a966a.sock
+Command-line arguments:  -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-ce0ef9ccc16e818b4b7b6336b37a966a.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:59.631
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:59.692
+!MESSAGE Started org.eclipse.buildship.core 41ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:59.693
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:59.842
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:59.921
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:22:59.923
+!MESSAGE Initializing Java Language Server 1.44.0.202501220510
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:00.634
+!MESSAGE ProjectRegistryRefreshJob finished 940ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:00.769
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:00.769
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:00.796
+!MESSAGE RepositoryRegistryUpdateJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:00.799
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:01.661
+!MESSAGE Workspace initialized in 865ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:01.671
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:01.987
+!MESSAGE >> Updating classpath for project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.005
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.005
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.007
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.225
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.873
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.874
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:23:02.875
+!MESSAGE Validated 1. Took 49 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:24:07.575
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:24:07.587
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:24:08.071
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:24:08.072
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 20:24:08.072
+!MESSAGE Validated 1. Took 34 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:29.281
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:29.285
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:29.755
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:29.756
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:29.756
+!MESSAGE Validated 1. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:31.298
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:31.777
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:31.777
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:31.777
+!MESSAGE Validated 1. Took 27 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:32.320
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:32.321
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:32.787
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:32.787
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:32.787
+!MESSAGE Validated 1. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:33.158
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:33.629
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:33.629
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:33.630
+!MESSAGE Validated 1. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:34.034
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:34.496
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:34.497
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:34.497
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:35.055
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:35.057
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:35.525
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:35.525
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-02 21:34:35.525
+!MESSAGE Validated 1. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:23.400
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:23.825
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:23.825
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:23.826
+!MESSAGE Validated 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:48.011
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:48.487
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:48.487
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:46:48.488
+!MESSAGE Validated 1. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:47:10.072
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:47:10.543
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:47:10.544
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:47:10.544
+!MESSAGE Validated 1. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:48:42.173
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:48:42.606
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:48:42.607
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:48:42.607
+!MESSAGE Validated 1. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:42.544
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:42.969
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:42.969
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:42.970
+!MESSAGE Validated 1. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:53.674
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:54.095
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:54.096
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:49:54.097
+!MESSAGE Validated 1. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:00.980
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:01.405
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:01.405
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:01.406
+!MESSAGE Validated 1. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:04.505
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:04.973
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:04.973
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:04.974
+!MESSAGE Validated 1. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:50.955
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:51.437
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:51.437
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:50:51.438
+!MESSAGE Validated 1. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:04.050
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:04.525
+!MESSAGE begin problem for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:04.526
+!MESSAGE 0 problems reported for /Door.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:04.526
+!MESSAGE Validated 1. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:11.424
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:11.850
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:11.850
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:11.851
+!MESSAGE Validated 1. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:37.159
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:37.581
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:37.581
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:37.582
+!MESSAGE Validated 1. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:47.192
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:47.665
+!MESSAGE begin problem for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:47.666
+!MESSAGE 0 problems reported for /Campus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:47.666
+!MESSAGE Validated 1. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:49.518
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:49.994
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:49.994
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:51:49.994
+!MESSAGE Validated 1. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:54:33.443
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:54:33.864
+!MESSAGE begin problem for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:54:33.864
+!MESSAGE 0 problems reported for /TourStatus.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:54:33.865
+!MESSAGE Validated 1. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:55:00.796
+!MESSAGE >> java/validateDocument
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:55:01.272
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:55:01.273
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 10:55:01.274
+!MESSAGE Validated 1. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 13:22:41.644
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 13:22:41.647
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 13:22:41.727
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-03 13:22:41.748
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2025-03-10 11:09:50.693 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-2ede52596bbad04e8784d02c15ebed0e.sock
+Command-line arguments:  -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-2ede52596bbad04e8784d02c15ebed0e.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:53.736
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:53.822
+!MESSAGE Started org.eclipse.buildship.core 60ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:53.823
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:54.106
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:54.152
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:54.155
+!MESSAGE Initializing Java Language Server 1.44.0.202501220510
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.055
+!MESSAGE ProjectRegistryRefreshJob finished 1231ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.171
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.171
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.193
+!MESSAGE RepositoryRegistryUpdateJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.196
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.907
+!MESSAGE Workspace initialized in 715ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:55.917
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:56.344
+!MESSAGE >> Updating classpath for project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:56.363
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:56.363
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:56.365
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:56.708
+!MESSAGE Reconciled 2. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:57.434
+!MESSAGE begin problem for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:57.436
+!MESSAGE 0 problems reported for /TourUMW.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:57.476
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:57.477
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:09:57.477
+!MESSAGE Validated 2. Took 118 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:10:09.147
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:10:09.149
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:10:09.191
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:10:09.199
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2025-03-10 11:11:36.905 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --pipe=/run/user/1000/lsp-efed01330d1183fe2c301ae107654069.sock
+Command-line arguments:  -data /home/dillan/.config/VSCodium/User/workspaceStorage/bcb29011b6a593a7655e40de5d8e1993/redhat.java/jdt_ws --pipe=/run/user/1000/lsp-efed01330d1183fe2c301ae107654069.sock
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:39.776
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:39.859
+!MESSAGE Started org.eclipse.buildship.core 55ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:39.860
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:40.040
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:40.115
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:40.117
+!MESSAGE Initializing Java Language Server 1.44.0.202501220510
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:41.057
+!MESSAGE ProjectRegistryRefreshJob finished 1197ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:41.229
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:41.230
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:41.259
+!MESSAGE RepositoryRegistryUpdateJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:41.269
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.184
+!MESSAGE Workspace initialized in 926ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.195
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.509
+!MESSAGE >> Updating classpath for project 240 project2_ef880147
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.528
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.529
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.531
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:42.697
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:43.366
+!MESSAGE begin problem for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:43.368
+!MESSAGE 0 problems reported for /Location.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:11:43.371
+!MESSAGE Validated 1. Took 73 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:12:04.647
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:12:04.650
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:12:04.700
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2025-03-10 11:12:04.710
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:

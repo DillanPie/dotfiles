@@ -1,0 +1,7 @@
+2025-03-10 11:09:49.222 [info] Marked extension as removed vadimcn.vscode-lldb-1.11.3
+2025-03-10 11:09:58.526 [info] Getting Manifest... jdinhlife.gruvbox
+2025-03-10 11:09:59.149 [info] Installing extension: jdinhlife.gruvbox {"productVersion":{"version":"1.97.0","date":"2025-02-06T19:54:45.711Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/dillan/.vscode-oss/extensions/extensions.json","path":"/home/dillan/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true}
+2025-03-10 11:09:59.908 [info] Extracted extension to file:///home/dillan/.vscode-oss/extensions/jdinhlife.gruvbox-1.24.5-universal: jdinhlife.gruvbox
+2025-03-10 11:09:59.915 [info] Renamed to /home/dillan/.vscode-oss/extensions/jdinhlife.gruvbox-1.24.5-universal
+2025-03-10 11:09:59.939 [info] Marked extension as removed jdinhlife.gruvbox-1.22.0
+2025-03-10 11:09:59.951 [info] Extension installed successfully: jdinhlife.gruvbox vscode-userdata:/home/dillan/.vscode-oss/extensions/extensions.json

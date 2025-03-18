@@ -1,0 +1,52 @@
+{
+    "98e3bb0c-3305-4e40-9207-9a1e4d4c61ef": {
+        "id": "98e3bb0c-3305-4e40-9207-9a1e4d4c61ef",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1739210994.328876
+    },
+    "0d4ad7c3-0929-4997-8ba3-b65955566ada": {
+        "id": "0d4ad7c3-0929-4997-8ba3-b65955566ada",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1739210994.328892
+    },
+    "0de4a10d-973a-492c-aafa-930c860f9852": {
+        "id": "0de4a10d-973a-492c-aafa-930c860f9852",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1739210994.3289013
+    },
+    "28dffaa1-5985-4f6e-a13e-41e6a8a0207f": {
+        "id": "28dffaa1-5985-4f6e-a13e-41e6a8a0207f",
+        "name": "Arch Wiki",
+        "keyword": "arch",
+        "cmd": "https://wiki.archlinux.org/title/Special:Search/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1739214668.389386
+    },
+    "205c3855-5993-44ea-b36d-ac4762d10d30": {
+        "id": "205c3855-5993-44ea-b36d-ac4762d10d30",
+        "name": "AUR",
+        "keyword": "aur",
+        "cmd": "https://aur.archlinux.org/packages?O=0&SeB=nd&K=%s&outdated=&SB=p&SO=d&PP=50&submit=Go",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1739214885.6601365
+    }
+}

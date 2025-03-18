@@ -1,0 +1,263 @@
+2025-03-11 09:42:00.399 [info] Extension host with pid 586403 started
+2025-03-11 09:42:00.399 [info] Skipping acquiring lock for /home/dillan/.config/VSCodium/User/workspaceStorage/09c0e3704f2c37e3c39b2e5e24cfddd7.
+2025-03-11 09:42:00.914 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-11 09:42:00.944 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2025-03-11 09:42:01.629 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-11 09:42:01.633 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2025-03-11 09:42:01.686 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-11 09:42:01.789 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-11 09:42:01.934 [info] Eager extensions activated
+2025-03-11 09:42:01.961 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:01.965 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:01.995 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:02.023 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:02.145 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished', root cause: franneck94.vscode-c-cpp-config
+2025-03-11 09:42:02.177 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:02.201 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:02.527 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:42:02.679 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-03-11 09:55:54.885 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+2025-03-11 09:55:54.962 [info] ExtensionService#_doActivateExtension christian-kohler.npm-intellisense, startup: false, activationEvent: 'onLanguage:javascript'
+2025-03-11 09:58:53.688 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-11 09:58:53.708 [error] Canceled: Canceled
+	at new J3 (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:118070)
+	at $y._remoteCall (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124364)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:121123)
+	at m0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:38347)
+	at m0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37786)
+	at r.registerCommand.description (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37050)
+	at m0._executeContributedCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:38916)
+	at m0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37919)
+	at m0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37786)
+	at Object.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:42161)
+	at Th.L [as value] (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:997662)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2937)
+	at P._deliverQueue (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3028)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3364)
+	at Object.p [as dispose] (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1020302)
+	at /opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1026681
+	at Array.forEach (<anonymous>)
+	at b.dispose (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1026667)
+	at l1.<anonymous> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:21545)
+	at l1.dispose (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:21641)
+	at l1.<anonymous> (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1000146)
+	at l1.dispose (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:21641)
+	at hi (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:18392
+	at file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at Iz._deactivate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14727)
+	at file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:12013
+	at Array.map (<anonymous>)
+	at Iz._deactivateAll (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:12001)
+	at Iz.terminate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:12354)
+	at _7.terminate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1602)
+	at rs (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:16313)
+	at MessagePortMain.<anonymous> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain.emit (node:domain:489:12)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-11 09:58:53.709 [error] Canceled: Canceled
+	at new J3 (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:118070)
+	at $y._remoteCall (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124364)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:121123)
+	at m0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:38347)
+	at m0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37786)
+	at r.registerCommand.description (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37050)
+	at m0._executeContributedCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:38916)
+	at m0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37919)
+	at m0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:37786)
+	at Object.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:42161)
+	at set hasGitHubRepositories (/opt/vscodium-bin/resources/app/extensions/github/dist/extension.js:2:344113)
+	at /opt/vscodium-bin/resources/app/extensions/github/dist/extension.js:2:345072
+	at Th.value (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1117862)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2937)
+	at P._deliverQueue (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3028)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3364)
+	at Object.p [as dispose] (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1020302)
+	at /opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1026681
+	at Array.forEach (<anonymous>)
+	at b.dispose (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1026667)
+	at l1.<anonymous> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:21545)
+	at l1.dispose (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:21641)
+	at l1.<anonymous> (/opt/vscodium-bin/resources/app/extensions/git/dist/main.js:2:1000146)
+	at l1.dispose (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:21641)
+	at hi (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:18392
+	at file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at Iz._deactivate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14727)
+	at file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:12013
+	at Array.map (<anonymous>)
+	at Iz._deactivateAll (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:12001)
+	at Iz.terminate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:12354)
+	at _7.terminate (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1602)
+	at rs (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:16313)
+	at MessagePortMain.<anonymous> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain.emit (node:domain:489:12)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-11 09:58:53.711 [info] Extension host with pid 586403 exiting with code 0
+2025-03-11 09:58:54.496 [info] Extension host with pid 599252 started
+2025-03-11 09:58:54.496 [info] Skipping acquiring lock for /home/dillan/.config/VSCodium/User/workspaceStorage/09c0e3704f2c37e3c39b2e5e24cfddd7.
+2025-03-11 09:58:54.513 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-11 09:58:54.548 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2025-03-11 09:58:54.642 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onCommand:vscode-html-css.validate'
+2025-03-11 09:58:54.645 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: 'onFileSystem:git', root cause: vscode.git
+2025-03-11 09:58:54.648 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-03-11 09:58:54.683 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+2025-03-11 09:58:54.758 [info] ExtensionService#_doActivateExtension christian-kohler.npm-intellisense, startup: false, activationEvent: 'onLanguage:javascript'
+2025-03-11 09:58:54.938 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'onFileSystem:git'
+2025-03-11 09:58:55.513 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-11 09:58:55.552 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2025-03-11 09:58:55.667 [info] Eager extensions activated
+2025-03-11 09:58:55.683 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:58:55.687 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:58:55.715 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:58:55.844 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished', root cause: franneck94.vscode-c-cpp-config
+2025-03-11 09:58:55.903 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:58:55.929 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 09:58:56.165 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-03-11 10:02:22.973 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2025-03-11 13:25:48.511 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 13:25:48.512 [error] undefined
+2025-03-11 13:25:49.381 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 13:25:49.382 [error] undefined
+2025-03-11 13:26:24.061 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 13:26:24.061 [error] undefined
+2025-03-11 13:26:25.285 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 13:26:25.285 [error] undefined
+2025-03-11 13:26:26.002 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 13:26:26.002 [error] undefined
+2025-03-11 13:26:46.407 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 13:26:46.407 [error] undefined
+2025-03-11 21:24:55.164 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-11 21:24:55.165 [error] undefined
+2025-03-12 13:08:23.657 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-12 13:08:23.657 [error] undefined
+2025-03-12 13:08:36.098 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-12 13:08:36.098 [error] undefined
+2025-03-12 13:11:28.680 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-12 13:11:28.680 [error] undefined
+2025-03-13 13:07:54.619 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:07:54.629 [error] undefined
+2025-03-13 13:07:54.800 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:07:54.800 [error] undefined
+2025-03-13 13:09:12.199 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:09:12.199 [error] undefined
+2025-03-13 13:09:47.445 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:09:47.445 [error] undefined
+2025-03-13 13:09:48.996 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:09:48.996 [error] undefined
+2025-03-13 13:10:19.324 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:10:19.324 [error] undefined
+2025-03-13 13:10:22.835 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:10:22.835 [error] undefined
+2025-03-13 13:11:27.194 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:11:27.194 [error] undefined
+2025-03-13 13:12:11.148 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:12:11.148 [error] undefined
+2025-03-13 13:13:56.512 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:13:56.512 [error] undefined
+2025-03-13 13:13:58.191 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:13:58.191 [error] undefined
+2025-03-13 13:13:59.738 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:13:59.738 [error] undefined
+2025-03-13 13:15:15.776 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:15:15.777 [error] undefined
+2025-03-13 13:16:10.122 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:16:10.122 [error] undefined
+2025-03-13 13:16:20.947 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:16:20.947 [error] undefined
+2025-03-13 13:16:22.060 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:16:22.061 [error] undefined
+2025-03-13 13:16:45.040 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:16:45.040 [error] undefined
+2025-03-13 13:16:45.741 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:16:45.742 [error] undefined
+2025-03-13 13:16:52.685 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:16:52.685 [error] undefined
+2025-03-13 13:21:35.713 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:21:35.713 [error] undefined
+2025-03-13 13:22:21.640 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:22:21.640 [error] undefined
+2025-03-13 13:22:44.205 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:22:44.205 [error] undefined
+2025-03-13 13:22:44.436 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:22:44.436 [error] undefined
+2025-03-13 13:23:08.338 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:23:08.338 [error] undefined
+2025-03-13 13:23:25.859 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:23:25.859 [error] undefined
+2025-03-13 13:23:27.162 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:23:27.162 [error] undefined
+2025-03-13 13:23:27.237 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:23:27.237 [error] undefined
+2025-03-13 13:28:58.828 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:28:58.828 [error] undefined
+2025-03-13 13:28:58.927 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:28:58.927 [error] undefined
+2025-03-13 13:29:00.245 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 13:29:00.245 [error] undefined
+2025-03-13 14:52:22.869 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:52:22.870 [error] undefined
+2025-03-13 14:52:24.561 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:52:24.561 [error] undefined
+2025-03-13 14:52:24.748 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:52:24.748 [error] undefined
+2025-03-13 14:52:30.563 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:52:30.563 [error] undefined
+2025-03-13 14:52:31.258 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:52:31.258 [error] undefined
+2025-03-13 14:52:32.218 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:52:32.218 [error] undefined
+2025-03-13 14:55:59.707 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 14:55:59.708 [error] undefined
+2025-03-13 15:01:42.416 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:01:42.416 [error] undefined
+2025-03-13 15:06:25.881 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:06:25.881 [error] undefined
+2025-03-13 15:06:25.908 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:06:25.908 [error] undefined
+2025-03-13 15:11:08.545 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:11:08.545 [error] undefined
+2025-03-13 15:11:25.539 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:11:25.539 [error] undefined
+2025-03-13 15:11:28.181 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:11:28.181 [error] undefined
+2025-03-13 15:11:28.420 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:11:28.420 [error] undefined
+2025-03-13 15:13:35.032 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:13:35.033 [error] undefined
+2025-03-13 15:13:37.955 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:13:37.955 [error] undefined
+2025-03-13 15:13:38.165 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:13:38.166 [error] undefined
+2025-03-13 15:13:40.336 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:13:40.336 [error] undefined
+2025-03-13 15:13:47.899 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:13:47.899 [error] undefined
+2025-03-13 15:14:09.993 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:14:09.993 [error] undefined
+2025-03-13 15:14:18.570 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:14:18.570 [error] undefined
+2025-03-13 15:15:40.081 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:15:40.081 [error] undefined
+2025-03-13 15:15:40.110 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:15:40.110 [error] undefined
+2025-03-13 15:38:25.627 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:38:25.627 [error] undefined
+2025-03-13 15:38:25.971 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:38:25.971 [error] undefined
+2025-03-13 15:38:30.616 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:38:30.616 [error] undefined
+2025-03-13 15:38:35.262 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:38:35.262 [error] undefined
+2025-03-13 15:40:02.541 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:40:02.541 [error] undefined
+2025-03-13 15:40:03.711 [error] [ecmel.vscode-html-css] provider FAILED
+2025-03-13 15:40:03.712 [error] undefined
+2025-03-13 16:12:52.741 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2025-03-13 16:52:14.289 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-03-13 16:52:14.301 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-03-13 16:52:14.622 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features

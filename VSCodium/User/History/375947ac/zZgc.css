@@ -1,0 +1,65 @@
+/* about.css */
+
+/* General Styling */
+body {
+    margin: 0;
+    background-color: #282828;
+    color: #ddc7a1;
+    font-family: "FiraCode Nerd Font", monospace;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    background-color: #32302f;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.7s ease;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 200px;
+    height: 200px; /* Force it to be a perfect circle */
+    object-fit: cover; /* Ensures it crops instead of stretching */
+    border-radius: 50%;
+    border: 4px solid #d8a657;
+}
+
+/* About Text */
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Highlighted Text */
+.about-text strong {
+    color: #689d6a; /* Aqua Gruvbox Color */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,59 @@
+2025-03-10 14:37:14.979 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'attributableCoverage' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-10 14:37:14.979 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-10 14:37:14.980 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.debugpy' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-10 14:37:14.980 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'redhat.java' wants API proposal 'documentPaste' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-10 14:37:15.590 [info] Started local extension host with pid 372451.
+2025-03-10 14:37:18.460 [info] [perf] Render performance baseline is 37ms
+2025-03-10 14:37:28.037 [error] Error while getting the latest version for the extension 13xforever.language-x86-64-assembly. Fetch timeout: 10000ms
+2025-03-10 14:37:28.038 [error] Error while getting the latest version for the extension abusaidm.html-snippets. Fetch timeout: 10000ms
+2025-03-10 14:37:28.038 [error] Error while getting the latest version for the extension bbenoist.doxygen. Fetch timeout: 10000ms
+2025-03-10 14:37:28.039 [error] Error while getting the latest version for the extension cheshirekow.cmake-format. Fetch timeout: 10000ms
+2025-03-10 14:37:28.040 [error] Error while getting the latest version for the extension christian-kohler.npm-intellisense. Fetch timeout: 10000ms
+2025-03-10 14:37:28.040 [error] Error while getting the latest version for the extension christian-kohler.path-intellisense. Fetch timeout: 10000ms
+2025-03-10 14:37:28.041 [error] Error while getting the latest version for the extension cschlosser.doxdocgen. Fetch timeout: 10000ms
+2025-03-10 14:37:28.041 [error] Error while getting the latest version for the extension ecmel.vscode-html-css. Fetch timeout: 10000ms
+2025-03-10 14:37:28.042 [error] Error while getting the latest version for the extension esbenp.prettier-vscode. Fetch timeout: 10000ms
+2025-03-10 14:37:28.042 [error] Error while getting the latest version for the extension franneck94.c-cpp-runner. Fetch timeout: 10000ms
+2025-03-10 14:37:28.043 [error] Error while getting the latest version for the extension franneck94.vscode-c-cpp-config. Fetch timeout: 10000ms
+2025-03-10 14:37:28.043 [error] Error while getting the latest version for the extension franneck94.vscode-c-cpp-dev-extension-pack. Fetch timeout: 10000ms
+2025-03-10 14:37:28.044 [error] Error while getting the latest version for the extension jdinhlife.gruvbox. Fetch timeout: 10000ms
+2025-03-10 14:37:28.044 [error] Error while getting the latest version for the extension jeff-hykin.better-cpp-syntax. Fetch timeout: 10000ms
+2025-03-10 14:37:28.045 [error] Error while getting the latest version for the extension pkief.material-icon-theme. Fetch timeout: 10000ms
+2025-03-10 14:37:28.045 [error] Error while getting the latest version for the extension redhat.java. Fetch timeout: 10000ms
+2025-03-10 14:37:28.046 [error] Error while getting the latest version for the extension streetsidesoftware.code-spell-checker. Fetch timeout: 10000ms
+2025-03-10 14:37:28.047 [error] Error while getting the latest version for the extension twxs.cmake. Fetch timeout: 10000ms
+2025-03-10 14:37:28.047 [error] Error while getting the latest version for the extension vadimcn.vscode-lldb. Fetch timeout: 10000ms
+2025-03-10 14:37:28.048 [error] Error while getting the latest version for the extension xabikos.javascriptsnippets. Fetch timeout: 10000ms
+2025-03-10 15:13:58.388 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:14:12.485 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:15:37.541 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:15:40.300 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:17:31.689 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:17:34.486 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:17:35.508 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:17:38.156 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:18:53.595 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:18:55.542 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:18:56.771 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:19:00.955 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:19:03.214 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:19:17.961 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:20:30.828 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:21:39.135 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:23.082 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:24.302 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:31.693 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:33.776 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:38.190 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:40.473 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:56.388 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:26:59.489 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:27:00.692 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 15:52:24.063 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:23:16.655 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:23:22.011 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:31:28.383 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:31:31.278 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:32:38.279 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:33:01.032 [error] An unknown error occurred. Please consult the log for more details.
+2025-03-10 16:33:47.214 [error] An unknown error occurred. Please consult the log for more details.
