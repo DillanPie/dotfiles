@@ -1,39 +1,38 @@
 # 🌌 My Dotfiles
 
 A fully automated setup for my Arch Linux system, including:
-- **GNOME Configuration:** Extensions, Themes, Icons, Cursors, Fonts.
-- **Oh-My-Zsh:** Zsh configuration with plugins and themes.
-- **Spicetify:** Spotify theming made easy.
-- **Fastfetch:** Fancy system info on the terminal.
-- **AUR Helper:** Automated `yay` installation and package setup.
+- GNOME Configuration (Themes, Icons, Cursors, Fonts, Wallpaper)
+- Oh-My-Zsh Theme
+- Spicetify Themeing
+- Fastfetch Configuration
+- Automated AUR Helper Installation (yay)
 
 ---
 
 ## 📦 What's Included
 
 ### 🔧 GNOME Configuration
-- **Cursor Theme:** `Bibata-Modern-Ice`
-- **Icon Theme:** `Papirus-Dark`
-- **Shell Theme:** `Gruvbox-Dark`
-- **Applications Theme:** `Gruvbox-Material-Dark`
-- **Font:** `FiraCode Nerd Font`
-- **Automatic Extension Installation & Theming**
+- Cursor Theme: `Bibata-Modern-Ice`
+- Icon Theme: `Papirus-Dark`
+- Shell Theme: `Gruvbox-Dark`
+- Applications Theme: `Gruvbox-Material-Dark`
+- Font: `FiraCode Nerd Font`
+- Wallpaper: `wallpaper.png` (Automatically applied)
 
 ### 🐚 Oh-My-Zsh
-- `.zshrc` configuration
-- Custom plugins and themes (if any)
+- Custom theme installed to `~/.oh-my-zsh/custom/themes/`
 
 ### 🎵 Spicetify
-- Custom themes stored in `~/.config/spicetify/Themes/`
-- Automatic theme application
+- Themes copied to `~/.config/spicetify/Themes/`
+- Automatically applied
 
 ### ⚡ Fastfetch
-- Custom configuration for `fastfetch` stored in `~/.config/fastfetch/`
+- Configuration copied to `~/.config/fastfetch/`
 
 ---
 
 ## 💻 Installation
 
-### 📥 Clone the Repository
 ```bash
 git clone https://github.com/DillanPie/dotfiles.git ~/.dotfiles
+~/.dotfiles/install.sh

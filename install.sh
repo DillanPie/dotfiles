@@ -7,12 +7,13 @@ BACKUP_DIR="$HOME/.dotfiles_backup"
 
 # Files and directories to symlink
 declare -a FILES=(".bashrc" ".vimrc" ".zshrc")
-declare -a DIRECTORIES=("config/nvim" ".oh-my-zsh")
+declare -a DIRECTORIES=("config/nvim")
 
 # GNOME Directories
 GNOME_EXTENSIONS="$HOME/.local/share/gnome-shell/extensions"
 GNOME_THEMES="$HOME/.themes"
 GNOME_ICONS="$HOME/.icons"
+WALLPAPER_DEST="$HOME/Pictures/wallpaper.png"
 
 # Function to install yay
 install_yay() {
@@ -55,9 +56,9 @@ for file in "${FILES[@]}"; do
     ln -sfn "$DOTFILES_DIR/$file" "$HOME/$file"
 done
 
-# Symlink directories like ~/.config/nvim and ~/.oh-my-zsh
+# Symlink config directories
 for dir in "${DIRECTORIES[@]}"; do
-    TARGET_DIR="$HOME/$(basename "$dir")"
+    TARGET_DIR="$HOME/.config/$(basename "$dir")"
     if [ -d "$TARGET_DIR" ]; then
         echo "Backing up existing $TARGET_DIR to $BACKUP_DIR"
         mv "$TARGET_DIR" "$BACKUP_DIR"
@@ -83,13 +84,18 @@ gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Material-Dark"
 gsettings set org.gnome.desktop.interface font-name "FiraCode Nerd Font 11"
 gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Font 11"
 
+# Copy wallpaper to Pictures directory
+echo "Copying wallpaper..."
+cp "$DOTFILES_DIR/wallpaper.png" "$WALLPAPER_DEST"
+
+# Set the wallpaper
+echo "Setting wallpaper..."
+gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER_DEST"
+
 # Install Spicetify themes
 echo "Installing Spicetify themes..."
 mkdir -p ~/.config/spicetify/Themes
 cp -r "$DOTFILES_DIR/spicetify/"* ~/.config/spicetify/Themes/
-
-# Apply Spicetify theme
-echo "Applying Spicetify theme..."
 spicetify config current_theme YourThemeName
 spicetify apply
 
@@ -97,6 +103,11 @@ spicetify apply
 echo "Installing Fastfetch config..."
 mkdir -p ~/.config/fastfetch
 cp -r "$DOTFILES_DIR/fastfetch/"* ~/.config/fastfetch/
+
+# Copy Oh-My-Zsh theme
+echo "Installing Oh-My-Zsh theme..."
+mkdir -p "$HOME/.oh-my-zsh/custom/themes"
+cp -r "$DOTFILES_DIR/oh-my-zsh/themes/"* "$HOME/.oh-my-zsh/custom/themes/"
 
 # Change default shell to zsh if not already
 if [ "$SHELL" != "/bin/zsh" ]; then
