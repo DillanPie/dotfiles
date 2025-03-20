@@ -9,6 +9,13 @@ GREEN="\e[32m"
 YELLOW="\e[33m"
 RESET="\e[0m"
 
+# Prevent running as root
+if [ "$EUID" -eq 0 ]; then
+  echo -e "${YELLOW}Do NOT run this script as root or with sudo!${RESET}"
+  echo "Instead, run this as your regular user (e.g., test, DillanPie, etc.)."
+  exit 1
+fi
+
 echo -e "${GREEN}Starting bootstrap process...${RESET}"
 
 # Update the system
@@ -17,7 +24,7 @@ sudo pacman -Syu --noconfirm
 
 # Install essential packages
 echo -e "${YELLOW}Installing essential packages...${RESET}"
-sudo pacman -S --needed --noconfirm git base-devel wget curl zsh gnome-shell gnome-control-center
+sudo pacman -S --needed --noconfirm git base-devel wget curl zsh
 
 # Check if git is installed
 if ! command -v git &> /dev/null; then
@@ -38,11 +45,14 @@ else
     echo -e "${GREEN}yay is already installed. ✅${RESET}"
 fi
 
-# Install GNOME if not installed
-if ! command -v gnome-shell &> /dev/null; then
-    echo -e "${YELLOW}Installing GNOME packages...${RESET}"
-    sudo pacman -S gnome gnome-extra --noconfirm
-fi
+# Install Full GNOME Desktop Environment
+echo -e "${YELLOW}Installing full GNOME desktop environment...${RESET}"
+sudo pacman -S --needed --noconfirm gnome gnome-extra gdm
+
+# Enable GDM (GNOME Display Manager)
+echo -e "${YELLOW}Enabling GDM (Login Manager)...${RESET}"
+sudo systemctl enable gdm
+sudo systemctl start gdm
 
 # Install Zsh if not installed
 if ! command -v zsh &> /dev/null; then
@@ -56,12 +66,32 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
+# Install AUR packages via yay
+echo -e "${YELLOW}Installing AUR packages (Spotify, Spicetify, Fastfetch)...${RESET}"
+yay -S --needed --noconfirm spotify spicetify-cli fastfetch
+
 # Clone your dotfiles repo if not already cloned
 if [ ! -d "$HOME/.dotfiles" ]; then
     echo -e "${YELLOW}Cloning your dotfiles repo...${RESET}"
     git clone https://github.com/DillanPie/dotfiles.git ~/.dotfiles
 else
     echo -e "${GREEN}Dotfiles repo already exists at ~/.dotfiles ✅${RESET}"
+fi
+
+# Install GNOME Extensions from your repo (if they exist)
+if [ -d "$HOME/.dotfiles/gnome/extensions" ]; then
+    echo -e "${YELLOW}Installing GNOME Extensions...${RESET}"
+    EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
+    mkdir -p "$EXTENSIONS_DIR"
+    cp -r "$HOME/.dotfiles/gnome/extensions/"* "$EXTENSIONS_DIR/"
+    
+    echo -e "${YELLOW}Enabling GNOME Extensions...${RESET}"
+    for extension in "$EXTENSIONS_DIR"/*; do
+        if [ -d "$extension" ]; then
+            extension_name=$(basename "$extension")
+            gnome-extensions enable "$extension_name" || echo "Failed to enable $extension_name"
+        fi
+    done
 fi
 
 # Run the install script from your dotfiles repo
