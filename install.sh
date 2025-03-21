@@ -107,7 +107,7 @@ cp -r "$DOTFILES_DIR/fastfetch/"* ~/.config/fastfetch/
 # Copy Oh-My-Zsh theme
 echo "Installing Oh-My-Zsh theme..."
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"
-cp -r "$DOTFILES_DIR/oh-my-zsh/theme/"* "$HOME/.oh-my-zsh/custom/themes/"
+cp -r "$DOTFILES_DIR/oh-my-zsh/theme/gruvbox.zsh-config"* "$HOME/.oh-my-zsh/custom/themes/gruvbox.zsh-config"
 
 # Change default shell to zsh if not already
 if [ "$SHELL" != "/bin/zsh" ]; then
