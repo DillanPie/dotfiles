@@ -45,14 +45,18 @@ else
     echo -e "${GREEN}yay is already installed. ✅${RESET}"
 fi
 
-# Install Full GNOME Desktop Environment
-echo -e "${YELLOW}Installing full GNOME desktop environment...${RESET}"
-sudo pacman -S --needed --noconfirm gnome gnome-extra gdm
+# Install Core GNOME (Without Extra Packages)
+echo -e "${YELLOW}Installing core GNOME desktop environment...${RESET}"
+sudo pacman -S --needed --noconfirm gnome-shell gnome-control-center gdm gnome-backgrounds nautilus dconf-editor
 
 # Enable GDM (GNOME Display Manager)
 echo -e "${YELLOW}Enabling GDM (Login Manager)...${RESET}"
 sudo systemctl enable gdm
 sudo systemctl start gdm
+
+# Install Extension Manager
+echo -e "${YELLOW}Installing Extension Manager...${RESET}"
+yay -S --needed --noconfirm gnome-shell-extension-manager
 
 # Install Zsh if not installed
 if ! command -v zsh &> /dev/null; then
@@ -65,6 +69,11 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo -e "${YELLOW}Installing Oh-My-Zsh...${RESET}"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
+
+# Copy Oh-My-Zsh theme from .dotfiles to correct directory
+echo -e "${YELLOW}Installing your Oh-My-Zsh theme...${RESET}"
+mkdir -p "$HOME/.oh-my-zsh/custom/themes"
+cp -r "$HOME/.dotfiles/oh-my-zsh/themes/"* "$HOME/.oh-my-zsh/custom/themes/"
 
 # Install AUR packages via yay
 echo -e "${YELLOW}Installing AUR packages (Spotify, Spicetify, Fastfetch)...${RESET}"
@@ -101,6 +110,12 @@ gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Material-Dark"
 gsettings set org.gnome.desktop.wm.preferences theme "Gruvbox-Dark"
 gsettings set org.gnome.shell.extensions.user-theme name "Gruvbox-Dark"
+
+# Apply GNOME Extension Settings (If Present)
+if [ -f "$HOME/.dotfiles/gnome/gnome-settings.conf" ]; then
+    echo -e "${YELLOW}Applying GNOME extension settings...${RESET}"
+    dconf load / < "$HOME/.dotfiles/gnome/gnome-settings.conf"
+fi
 
 # Run the install script from your dotfiles repo
 echo -e "${YELLOW}Running your install.sh script...${RESET}"
