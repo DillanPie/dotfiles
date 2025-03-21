@@ -94,6 +94,14 @@ if [ -d "$HOME/.dotfiles/gnome/extensions" ]; then
     done
 fi
 
+# Apply GNOME Settings
+echo -e "${YELLOW}Applying GNOME settings...${RESET}"
+gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Material-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Gruvbox-Dark"
+gsettings set org.gnome.shell.extensions.user-theme name "Gruvbox-Dark"
+
 # Run the install script from your dotfiles repo
 echo -e "${YELLOW}Running your install.sh script...${RESET}"
 bash ~/.dotfiles/install.sh
