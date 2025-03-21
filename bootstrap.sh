@@ -107,6 +107,11 @@ if [ -d "$HOME/.dotfiles/gnome/extensions" ]; then
     done
 fi
 
+# Ensure User Themes Extension is Enabled
+echo -e "${YELLOW}Enabling User Themes Extension...${RESET}"
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com 2>/dev/null || echo "User Themes extension not found! Installing it now."
+sudo pacman -S --needed --noconfirm gnome-shell-extensions
+
 # Apply GNOME Settings
 echo -e "${YELLOW}Applying GNOME settings...${RESET}"
 gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
