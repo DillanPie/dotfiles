@@ -7,6 +7,7 @@ set -e  # Exit on error
 # Colors for nice output
 GREEN="\e[32m"
 YELLOW="\e[33m"
+RED="\e[31m"
 RESET="\e[0m"
 
 # Prevent running as root
@@ -45,6 +46,10 @@ else
     echo -e "${GREEN}yay is already installed. ✅${RESET}"
 fi
 
+# Refresh yay database and install Extension Manager
+echo -e "${YELLOW}Installing Extension Manager...${RESET}"
+yay -Sy --needed --noconfirm extension-manager
+
 # Install Core GNOME (Without Extra Packages)
 echo -e "${YELLOW}Installing core GNOME desktop environment...${RESET}"
 sudo pacman -S --needed --noconfirm gnome-shell gnome-control-center gdm gnome-backgrounds nautilus dconf-editor gnome-terminal
@@ -52,10 +57,6 @@ sudo pacman -S --needed --noconfirm gnome-shell gnome-control-center gdm gnome-b
 # Enable GDM (But DO NOT Start It Yet)
 echo -e "${YELLOW}Enabling GDM (Login Manager)...${RESET}"
 sudo systemctl enable gdm
-
-# Install Extension Manager
-echo -e "${YELLOW}Installing Extension Manager...${RESET}"
-yay -S --needed --noconfirm gnome-shell-extension-manager
 
 # Install Zsh if not installed
 if ! command -v zsh &> /dev/null; then
@@ -71,8 +72,12 @@ fi
 
 # Copy Oh-My-Zsh theme from .dotfiles to correct directory
 echo -e "${YELLOW}Installing your Oh-My-Zsh theme...${RESET}"
-mkdir -p "$HOME/.oh-my-zsh/custom/themes"
-cp -r "$HOME/.dotfiles/oh-my-zsh/themes/"* "$HOME/.oh-my-zsh/custom/themes/"
+if [ -d "$HOME/.dotfiles/oh-my-zsh/themes" ]; then
+    mkdir -p "$HOME/.oh-my-zsh/custom/themes"
+    cp -r "$HOME/.dotfiles/oh-my-zsh/themes/"* "$HOME/.oh-my-zsh/custom/themes/"
+else
+    echo -e "${RED}Oh-My-Zsh theme folder not found! Make sure ~/.dotfiles/oh-my-zsh/themes/ exists.${RESET}"
+fi
 
 # Install AUR packages via yay
 echo -e "${YELLOW}Installing AUR packages (Spotify, Spicetify, Fastfetch)...${RESET}"
