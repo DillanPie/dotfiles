@@ -47,12 +47,11 @@ fi
 
 # Install Core GNOME (Without Extra Packages)
 echo -e "${YELLOW}Installing core GNOME desktop environment...${RESET}"
-sudo pacman -S --needed --noconfirm gnome-shell gnome-control-center gdm gnome-backgrounds nautilus dconf-editor
+sudo pacman -S --needed --noconfirm gnome-shell gnome-control-center gdm gnome-backgrounds nautilus dconf-editor gnome-terminal
 
-# Enable GDM (GNOME Display Manager)
+# Enable GDM (But DO NOT Start It Yet)
 echo -e "${YELLOW}Enabling GDM (Login Manager)...${RESET}"
 sudo systemctl enable gdm
-sudo systemctl start gdm
 
 # Install Extension Manager
 echo -e "${YELLOW}Installing Extension Manager...${RESET}"
@@ -120,5 +119,9 @@ fi
 # Run the install script from your dotfiles repo
 echo -e "${YELLOW}Running your install.sh script...${RESET}"
 bash ~/.dotfiles/install.sh
+
+# Start GDM Now That Everything Is Done
+echo -e "${YELLOW}Starting GDM...${RESET}"
+sudo systemctl start gdm
 
 echo -e "${GREEN}Bootstrap process completed successfully! 🎉${RESET}"
