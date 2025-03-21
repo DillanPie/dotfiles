@@ -54,6 +54,10 @@ yay -Sy --needed --noconfirm extension-manager
 echo -e "${YELLOW}Installing core GNOME desktop environment...${RESET}"
 sudo pacman -S --needed --noconfirm gnome-shell gnome-control-center gdm gnome-backgrounds nautilus dconf-editor gnome-terminal
 
+# Install gnome-shell-extensions (User Themes)
+echo -e "${YELLOW}Installing GNOME Shell Extensions (user-theme)...${RESET}"
+sudo pacman -S --needed --noconfirm gnome-shell-extensions
+
 # Enable GDM (But DO NOT Start It Yet)
 echo -e "${YELLOW}Enabling GDM (Login Manager)...${RESET}"
 sudo systemctl enable gdm
@@ -107,10 +111,9 @@ if [ -d "$HOME/.dotfiles/gnome/extensions" ]; then
     done
 fi
 
-# Ensure User Themes Extension is Enabled
+# Enable the User Themes Extension
 echo -e "${YELLOW}Enabling User Themes Extension...${RESET}"
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com 2>/dev/null || echo "User Themes extension not found! Installing it now."
-sudo pacman -S --needed --noconfirm gnome-shell-extensions
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 # Apply GNOME Settings
 echo -e "${YELLOW}Applying GNOME settings...${RESET}"
