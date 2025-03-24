@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# install.sh - Sets up dotfiles, GNOME settings, yay, Spicetify, Fastfetch, and Oh-My-Zsh
+# install.sh - Sets up dotfiles, GNOME settings, yay, Spicetify, Fastfetch, Oh-My-Zsh, fzf, and user-theme extension
 
 DOTFILES_DIR="$HOME/.dotfiles"
 BACKUP_DIR="$HOME/.dotfiles_backup"
@@ -91,7 +91,15 @@ install_oh_my_zsh
 
 # Install necessary packages via yay
 echo "Installing necessary packages via yay..."
-yay -S --needed --noconfirm bibata-cursor-theme papirus-icon-theme gruvbox-material-gtk-theme gruvbox-dark-gtk ttf-firacode-nerd spicetify-cli fastfetch
+yay -S --needed --noconfirm bibata-cursor-theme papirus-icon-theme gruvbox-material-gtk-theme gruvbox-dark-gtk ttf-firacode-nerd spicetify-cli fastfetch fzf
+
+# Install user-theme extension (if not installed)
+echo "Installing user-theme extension for GNOME..."
+if [ ! -d "$GNOME_EXTENSIONS/user-theme@gnome-shell-extensions.gcampax.github.com" ]; then
+    sudo pacman -S --needed --noconfirm gnome-shell-extensions
+    gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+    echo "User-theme extension enabled successfully! ✅"
+fi
 
 # Apply GNOME Settings
 echo "Applying GNOME settings..."
