@@ -67,6 +67,10 @@ else
     echo -e "${GREEN}Dotfiles repo already exists at ~/.dotfiles ✅${RESET}"
 fi
 
+# Fix PGP Key Import Errors
+echo -e "${YELLOW}Fetching PGP keys for Spotify...${RESET}"
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys B420FD3777CCE3A7F0076B55C85668DF69375001 || echo -e "${RED}Failed to import key!${RESET}"
+
 # Run the install.sh script
 echo -e "${YELLOW}Running install.sh script...${RESET}"
 bash ~/.dotfiles/install.sh
