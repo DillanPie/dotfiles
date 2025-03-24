@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# install.sh - Sets up dotfiles, GNOME settings, yay, Spicetify, Fastfetch, Oh-My-Zsh, fzf, and user-theme extension
+# install.sh - Sets up dotfiles, GNOME settings, yay, Spicetify, Fastfetch, Oh-My-Zsh, fzf, and gnome-tweaks
 
 DOTFILES_DIR="$HOME/.dotfiles"
 BACKUP_DIR="$HOME/.dotfiles_backup"
 
 # Files and directories to symlink
 declare -a FILES=(".bashrc" ".vimrc" ".zshrc")
-declare -a DIRECTORIES=("config/nvim" ".oh-my-zsh")
+declare -a DIRECTORIES=("config/nvim")
 
 # GNOME Directories
 GNOME_EXTENSIONS="$HOME/.local/share/gnome-shell/extensions"
@@ -71,9 +71,9 @@ for file in "${FILES[@]}"; do
     ln -sfn "$DOTFILES_DIR/$file" "$HOME/$file"
 done
 
-# Symlink directories like ~/.config/nvim and ~/.oh-my-zsh
+# Symlink directories like ~/.config/nvim
 for dir in "${DIRECTORIES[@]}"; do
-    TARGET_DIR="$HOME/$(basename "$dir")"
+    TARGET_DIR="$HOME/.config/$(basename "$dir")"
     if [ -d "$TARGET_DIR" ]; then
         echo "Backing up existing $TARGET_DIR to $BACKUP_DIR"
         mv "$TARGET_DIR" "$BACKUP_DIR"
@@ -89,9 +89,16 @@ install_yay
 # Install Oh-My-Zsh if not already installed
 install_oh_my_zsh
 
+# Check if ~/.oh-my-zsh/oh-my-zsh.sh exists, if not reinstall Oh-My-Zsh
+if [ ! -f "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]; then
+    echo "Oh-My-Zsh installation is broken. Reinstalling..."
+    rm -rf "$HOME/.oh-my-zsh"
+    install_oh_my_zsh
+fi
+
 # Install necessary packages via yay
 echo "Installing necessary packages via yay..."
-yay -S --needed --noconfirm bibata-cursor-theme papirus-icon-theme gruvbox-material-gtk-theme gruvbox-dark-gtk ttf-firacode-nerd spicetify-cli fastfetch fzf
+yay -S --needed --noconfirm bibata-cursor-theme papirus-icon-theme gruvbox-material-gtk-theme gruvbox-dark-gtk ttf-firacode-nerd spicetify-cli fastfetch fzf gnome-tweaks
 
 # Install user-theme extension (if not installed)
 echo "Installing user-theme extension for GNOME..."
