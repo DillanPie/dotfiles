@@ -7,13 +7,12 @@ BACKUP_DIR="$HOME/.dotfiles_backup"
 
 # Files and directories to symlink
 declare -a FILES=(".bashrc" ".vimrc" ".zshrc")
-declare -a DIRECTORIES=("config/nvim")
+declare -a DIRECTORIES=("config/nvim" ".oh-my-zsh")
 
 # GNOME Directories
 GNOME_EXTENSIONS="$HOME/.local/share/gnome-shell/extensions"
 GNOME_THEMES="$HOME/.themes"
 GNOME_ICONS="$HOME/.icons"
-WALLPAPER_DEST="$HOME/Pictures/wallpaper.png"
 
 # Function to install yay
 install_yay() {
@@ -34,9 +33,25 @@ install_yay() {
         cd ~
         rm -rf /tmp/yay
 
-        echo "yay installed successfully!"
+        echo "yay installed successfully! ✅"
     else
         echo "yay is already installed. ✅"
+    fi
+}
+
+# Function to install Oh-My-Zsh if not already installed
+install_oh_my_zsh() {
+    if [ ! -d "$HOME/.oh-my-zsh" ]; then
+        echo "Installing Oh-My-Zsh..."
+        
+        # Install zsh if not installed
+        sudo pacman -S --needed --noconfirm zsh
+
+        # Install Oh-My-Zsh
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+        echo "Oh-My-Zsh installed successfully! ✅"
+    else
+        echo "Oh-My-Zsh is already installed. ✅"
     fi
 }
 
@@ -56,9 +71,9 @@ for file in "${FILES[@]}"; do
     ln -sfn "$DOTFILES_DIR/$file" "$HOME/$file"
 done
 
-# Symlink config directories
+# Symlink directories like ~/.config/nvim and ~/.oh-my-zsh
 for dir in "${DIRECTORIES[@]}"; do
-    TARGET_DIR="$HOME/.config/$(basename "$dir")"
+    TARGET_DIR="$HOME/$(basename "$dir")"
     if [ -d "$TARGET_DIR" ]; then
         echo "Backing up existing $TARGET_DIR to $BACKUP_DIR"
         mv "$TARGET_DIR" "$BACKUP_DIR"
@@ -71,9 +86,12 @@ done
 # Install yay if not already installed
 install_yay
 
+# Install Oh-My-Zsh if not already installed
+install_oh_my_zsh
+
 # Install necessary packages via yay
 echo "Installing necessary packages via yay..."
-yay -S --needed --noconfirm bibata-cursor-theme papirus-icon-theme gruvbox-material-gtk-theme gruvbox-dark-gtk ttf-firacode-nerd spicetify-cli fastfetch zsh
+yay -S --needed --noconfirm bibata-cursor-theme papirus-icon-theme gruvbox-material-gtk-theme gruvbox-dark-gtk ttf-firacode-nerd spicetify-cli fastfetch
 
 # Apply GNOME Settings
 echo "Applying GNOME settings..."
@@ -84,18 +102,13 @@ gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Material-Dark"
 gsettings set org.gnome.desktop.interface font-name "FiraCode Nerd Font 11"
 gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Font 11"
 
-# Copy wallpaper to Pictures directory
-echo "Copying wallpaper..."
-cp "$DOTFILES_DIR/wallpaper.png" "$WALLPAPER_DEST"
-
-# Set the wallpaper
-echo "Setting wallpaper..."
-gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER_DEST"
-
 # Install Spicetify themes
 echo "Installing Spicetify themes..."
 mkdir -p ~/.config/spicetify/Themes
 cp -r "$DOTFILES_DIR/spicetify/"* ~/.config/spicetify/Themes/
+
+# Apply Spicetify theme
+echo "Applying Spicetify theme..."
 spicetify config current_theme YourThemeName
 spicetify apply
 
@@ -104,15 +117,8 @@ echo "Installing Fastfetch config..."
 mkdir -p ~/.config/fastfetch
 cp -r "$DOTFILES_DIR/fastfetch/"* ~/.config/fastfetch/
 
-# Copy Oh-My-Zsh theme
-echo "Installing Oh-My-Zsh theme..."
-mkdir -p "$HOME/.oh-my-zsh/custom/themes"
-cp -r "$DOTFILES_DIR/oh-my-zsh/theme/gruvbox.zsh-config"* "$HOME/.oh-my-zsh/custom/themes/gruvbox.zsh-config"
-
-# Change default shell to zsh if not already
-if [ "$SHELL" != "/bin/zsh" ]; then
-    echo "Changing default shell to zsh..."
-    chsh -s /bin/zsh
-fi
+# Change default shell to Zsh
+echo "Changing default shell to Zsh..."
+chsh -s $(which zsh)
 
 echo "Dotfiles and configurations installed successfully! 🎉"
