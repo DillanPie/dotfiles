@@ -37,57 +37,61 @@ done
 
 echo "Installing GNOME Extensions..."
 
-EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
+GNOME_EXT_LIST="$DOTFILES_DIR/gnome/extensions"
+USER_EXT_DIR="$HOME/.local/share/gnome-shell/extensions"
+GNOME_CONFIG="$DOTFILES_DIR/gnome/gnome-settings.conf"
 
-# Ensure necessary directories exist
-mkdir -p "$BACKUP_DIR" "$EXTENSIONS_DIR"
+# Ensure extension directory exists
+mkdir -p "$USER_EXT_DIR"
 
-echo "Starting dotfiles installation..."
+echo "🔍 Reading GNOME Extensions from $GNOME_EXT_LIST..."
 
-# 🖥️ **Enable GNOME Extensions Support**
-echo "Enabling user GNOME extensions..."
-gsettings set org.gnome.shell disable-user-extensions false
+if [ ! -d "$GNOME_EXT_LIST" ]; then
+    echo "❌ No GNOME extensions directory found in $GNOME_EXT_LIST!"
+    exit 1
+fi
 
-# 🧩 **GNOME Extensions to Install**
-EXTENSIONS_LIST=(
-    "appindicatorsupport@rgcjonas.gmail.com"
-    "dash-to-dock@micxgx.gmail.com"
-    "clipboard-indicator@tudmotu.com"
-    "caffeine@patapon.info"
-    "mediacontrols@cliffniff.github.com"
-    "openweather-extension@penguin-teal.github.io"
-    "hidetopbar@mathieu.bidon.ca"
-)
+# 🧩 **Find and Install Extensions from `extensions.gnome.org`**
+for EXTENSION in "$GNOME_EXT_LIST"/*; do
+    EXTENSION_NAME=$(basename "$EXTENSION")
 
-echo "Installing GNOME Extensions from extensions.gnome.org..."
-for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
-    EXTENSION_NAME=$(echo "$EXTENSION" | awk -F'@' '{print $1}')
+    echo "🔎 Searching for $EXTENSION_NAME on extensions.gnome.org..."
     EXTENSION_ID=$(curl -s "https://extensions.gnome.org/extension-query/?search=$EXTENSION_NAME" | jq -r '.extensions[0].id')
 
     if [ -z "$EXTENSION_ID" ] || [ "$EXTENSION_ID" == "null" ]; then
-        echo "⚠️ Could not find $EXTENSION on extensions.gnome.org. Skipping..."
+        echo "⚠️ Could not find $EXTENSION_NAME on extensions.gnome.org! Skipping..."
         continue
     fi
 
-    echo "Downloading $EXTENSION..."
+    echo "📥 Downloading $EXTENSION_NAME..."
     wget -O "/tmp/$EXTENSION_NAME.zip" "https://extensions.gnome.org/extension-data/$EXTENSION_NAME.shell-extension.zip"
 
-    echo "Installing $EXTENSION..."
-    gnome-extensions install "/tmp/$EXTENSION_NAME.zip" || echo "⚠️ Failed to install $EXTENSION"
+    echo "📦 Installing $EXTENSION_NAME..."
+    gnome-extensions install "/tmp/$EXTENSION_NAME.zip" || echo "⚠️ Failed to install $EXTENSION_NAME"
 done
 
 # ✅ **Enable Installed Extensions**
-echo "Enabling GNOME Extensions..."
-for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
-    if gnome-extensions list | grep -q "$EXTENSION"; then
-        echo "Enabling $EXTENSION..."
-        gnome-extensions enable "$EXTENSION" || echo "⚠️ Failed to enable $EXTENSION"
+echo "✅ Enabling GNOME Extensions..."
+for EXTENSION in "$GNOME_EXT_LIST"/*; do
+    EXTENSION_NAME=$(basename "$EXTENSION")
+    if gnome-extensions list | grep -q "$EXTENSION_NAME"; then
+        echo "✅ Enabling $EXTENSION_NAME..."
+        gnome-extensions enable "$EXTENSION_NAME" || echo "⚠️ Failed to enable $EXTENSION_NAME"
     else
-        echo "⚠️ $EXTENSION is missing! Check if it was installed properly."
+        echo "⚠️ Extension $EXTENSION_NAME is missing or not recognized!"
     fi
 done
 
-echo "GNOME Extensions installed and enabled successfully!"
+echo "🎉 GNOME Extensions installed and enabled successfully!"
+
+# 🛠 **Apply GNOME Settings from `gnome-settings.conf`**
+if [ -f "$GNOME_CONFIG" ]; then
+    echo "⚙ Applying GNOME settings from $GNOME_CONFIG..."
+    dconf load / < "$GNOME_CONFIG"
+    echo "✅ GNOME settings applied successfully!"
+else
+    echo "⚠️ No GNOME settings file found at $GNOME_CONFIG!"
+fi
 
 # Install GNOME dependencies and themes using yay
 yay -S --needed --noconfirm \
@@ -117,10 +121,6 @@ else
     echo "Cloning Gruvbox GTK Theme..."
     git clone --depth 1 "$GTK_THEME_REPO" "$GTK_THEME_DIR"
 fi
-
-# Apply the theme
-echo "Applying Gruvbox GTK Theme..."
-dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
 
 echo "Gruvbox GTK Theme installed and applied successfully!"
 
