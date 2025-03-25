@@ -51,7 +51,7 @@ spicetify apply
 
 # Ensure Zsh is the default shell
 echo "Changing default shell to Zsh..."
-cp .dotfiles/oh-my-zsh/theme .oh-my-zsh/custom/themes
+cp .dotfiles/oh-my-zsh/theme/gruvbox.zsh-theme .oh-my-zsh/custom/themes/gruvbox.zsh-theme
 cp .dotfiles/oh-my-zsh/.zshrc ~/
 chsh -s $(which zsh)
 
