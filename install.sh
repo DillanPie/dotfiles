@@ -98,7 +98,10 @@ yay -S --needed --noconfirm \
     gnome-tweaks\
     papirus-icon-theme \
     bibata-cursor-theme \
-    ttf-firacode-nerd
+    ttf-firacode-nerd \
+    sassc \
+    gtk-engine-murrine \
+    gnome-themes-extra
 
 # Ensure required directories exist
 mkdir -p ~/.themes ~/.icons ~/.local/share/fonts
