@@ -42,45 +42,52 @@ EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
 mkdir -p "$EXTENSIONS_DIR"
 
 # Install dependencies
-yay -S --needed --noconfirm gnome-shell-extension-manager gnome-browser-connector
+yay -S --needed --noconfirm extension-manager gnome-browser-connector gnome-shell-extensions gnome-shell-extension-prefs
 
-# List of extensions to install
-EXTENSIONS_LIST=(
-    "appindicatorsupport@rgcjonas.gmail.com"
-    "caffeine@patapon.info"
-    "clipboard-indicator@tudmotu.com"
-    "dash-to-dock@micxgx.gmail.com"
-    "hidetopbar@mathieu.bidon.ca"
-    "lockscreen-extension@pratap.fastmail.fm"
-    "mediacontrols@cliffniff.github.com"
-    "openweather-extension@penguin-teal.github.io"
+# Install extensions from AUR (recommended for stability)
+EXTENSIONS_AUR_LIST=(
+    "gnome-shell-extension-appindicator"
+    "gnome-shell-extension-dash-to-dock"
+    "gnome-shell-extension-clipboard-indicator"
+    "gnome-shell-extension-caffeine"
+    "gnome-shell-extension-mediacontrols"
+    "gnome-shell-extension-openweather"
+    "gnome-shell-extension-hidetopbar"
 )
 
-# Install and enable extensions
+echo "Installing GNOME Extensions from AUR..."
+yay -S --needed --noconfirm "${EXTENSIONS_AUR_LIST[@]}"
+
+# Enable installed extensions
+EXTENSIONS_LIST=(
+    "appindicatorsupport@rgcjonas.gmail.com"
+    "dash-to-dock@micxgx.gmail.com"
+    "clipboard-indicator@tudmotu.com"
+    "caffeine@patapon.info"
+    "mediacontrols@cliffniff.github.com"
+    "openweather-extension@penguin-teal.github.io"
+    "hidetopbar@mathieu.bidon.ca"
+)
+
+echo "Enabling GNOME Extensions..."
 for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
-    echo "Checking if $EXTENSION is installed..."
-    
     if gnome-extensions list | grep -q "$EXTENSION"; then
-        echo "$EXTENSION is already installed. Enabling..."
+        echo "$EXTENSION is installed. Enabling..."
+        gnome-extensions enable "$EXTENSION" || echo "⚠️ Failed to enable $EXTENSION"
     else
-        echo "Downloading $EXTENSION from extensions.gnome.org..."
-        extension_id=$(echo "$EXTENSION" | awk -F'@' '{print $1}')
-        wget -O "/tmp/$extension_id.zip" "https://extensions.gnome.org/extension-data/$extension_id.shell-extension.zip"
-        gnome-extensions install "/tmp/$extension_id.zip" || echo "Failed to install $EXTENSION"
+        echo "⚠️ Extension $EXTENSION is missing! Check if it was installed properly."
     fi
-    
-    # Enable the extension
-    gnome-extensions enable "$EXTENSION" || echo "Failed to enable $EXTENSION"
 done
 
-echo "GNOME Extensions installed and enabled!"
+echo "GNOME Extensions installed and enabled successfully!"
+
 
 
 echo "Installing GNOME dependencies from the AUR..."
 
 # Install GNOME dependencies and themes using yay
 yay -S --needed --noconfirm \
-    tweaks\
+    gnome-tweaks\
     papirus-icon-theme \
     bibata-cursor-theme \
     ttf-firacode-nerd
