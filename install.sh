@@ -46,11 +46,13 @@ gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Fon
 
 # Apply Spicetify theme
 echo "Applying Spicetify theme..."
-spicetify config current_theme YourThemeName
+spicetify config current_theme Dribbblish gruvbox
 spicetify apply
 
 # Ensure Zsh is the default shell
 echo "Changing default shell to Zsh..."
+cp .dotfiles/oh-my-zsh/theme .oh-my-zsh/custom/themes
+cp .dotfiles/oh-my-zsh/.zshrc ~/
 chsh -s $(which zsh)
 
 echo "Dotfiles and configurations applied successfully! 🎉"
