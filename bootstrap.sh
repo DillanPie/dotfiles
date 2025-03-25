@@ -13,7 +13,6 @@ RESET="\e[0m"
 # Prevent running as root
 if [ "$EUID" -eq 0 ]; then
   echo -e "${YELLOW}Do NOT run this script as root or with sudo!${RESET}"
-  echo "Instead, run this as your regular user (e.g., test, DillanPie, etc.)."
   exit 1
 fi
 
@@ -25,36 +24,23 @@ sudo pacman -Syu --noconfirm
 
 # Install essential packages
 echo -e "${YELLOW}Installing essential packages...${RESET}"
-sudo pacman -S --needed --noconfirm git base-devel wget curl zsh gnome-shell gnome-control-center gdm gnome-backgrounds nautilus dconf-editor gnome-terminal gnome-tweaks
+sudo pacman -S --needed --noconfirm git base-devel wget curl zsh gnome-shell gnome-control-center gdm nautilus dconf-editor gnome-terminal gnome-tweaks gnome-shell-extensions
 
-# Enable GDM but do not start it yet
-echo -e "${YELLOW}Enabling GDM (Login Manager)...${RESET}"
+# Enable GDM (But do NOT start it yet)
 sudo systemctl enable gdm
 
-# Install yay (if not already installed)
+# Install yay (if not installed)
 if ! command -v yay &> /dev/null; then
-    echo -e "${YELLOW}Installing yay (AUR Helper)...${RESET}"
+    echo -e "${YELLOW}Installing yay...${RESET}"
     git clone https://aur.archlinux.org/yay.git /tmp/yay
     cd /tmp/yay || exit
     makepkg -si --noconfirm
     cd ~
     rm -rf /tmp/yay
-    echo -e "${GREEN}yay installed successfully!${RESET}"
-else
-    echo -e "${GREEN}yay is already installed. ✅${RESET}"
 fi
-# Fix PGP Key Import Errors
-echo -e "${YELLOW}Fetching PGP keys for Spotify...${RESET}"
-gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys B420FD3777CCE3A7F0076B55C85668DF69375001 || echo -e "${RED}Failed to import key!${RESET}"
 
 # Install AUR packages via yay
-echo -e "${YELLOW}Installing AUR packages (Spotify, Spicetify, Fastfetch, Extension Manager)...${RESET}"
 yay -S --needed --noconfirm spotify spicetify-cli fastfetch extension-manager
-
-# Install GNOME Shell Extensions (User Themes)
-echo -e "${YELLOW}Installing GNOME Shell Extensions (user-theme)...${RESET}"
-sudo pacman -S --needed --noconfirm gnome-shell-extensions
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 # Install Oh-My-Zsh if not installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -62,20 +48,9 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
-# Clone dotfiles if not already cloned
-if [ ! -d "$HOME/.dotfiles" ]; then
-    echo -e "${YELLOW}Cloning your dotfiles repo...${RESET}"
-    git clone https://github.com/DillanPie/dotfiles.git ~/.dotfiles
-else
-    echo -e "${GREEN}Dotfiles repo already exists at ~/.dotfiles ✅${RESET}"
-fi
-
-# Run the install.sh script
+# Run install.sh
 echo -e "${YELLOW}Running install.sh script...${RESET}"
 bash ~/.dotfiles/install.sh
 
-# Start GDM now that everything is done
-echo -e "${YELLOW}Starting GDM...${RESET}"
+# Start GDM
 sudo systemctl start gdm
-
-echo -e "${GREEN}Bootstrap process completed successfully! 🎉${RESET}"
