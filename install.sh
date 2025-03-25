@@ -35,40 +35,46 @@ for dir in "${DIRECTORIES[@]}"; do
     ln -sfn "$DOTFILES_DIR/$dir" "$TARGET_DIR"
 done
 
-# Apply GNOME Settings
-echo "Applying GNOME settings..."
-dbus-launch gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
-dbus-launch gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Material-Dark"
-dbus-launch gsettings set org.gnome.desktop.interface font-name "FiraCode Nerd Font 11"
-dbus-launch gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Font 11"
-
-# Apply GNOME Shell Theme (User Theme Extension must be enabled first)
-if gnome-extensions list | grep -q "user-theme"; then
-    dbus-launch gsettings set org.gnome.shell.extensions.user-theme name "Gruvbox-Dark"
-else
-    echo "User Theme extension is not enabled. Trying to enable..."
-    gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com || echo "Failed to enable User Theme extension!"
-fi
-
-# Install GNOME Extensions (if present in dotfiles)
 echo "Installing GNOME Extensions..."
+
+# Ensure extension directory exists
 EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
 mkdir -p "$EXTENSIONS_DIR"
-if [ -d "$DOTFILES_DIR/gnome/extensions" ]; then
-    cp -r "$DOTFILES_DIR/gnome/extensions/"* "$EXTENSIONS_DIR/"
-    for extension in "$EXTENSIONS_DIR"/*; do
-        if [ -d "$extension" ]; then
-            extension_name=$(basename "$extension")
-            gnome-extensions enable "$extension_name" || echo "Failed to enable $extension_name"
+
+# Install extensions via extension manager if available
+if command -v gnome-extensions &> /dev/null; then
+    # List of extensions to install
+    EXTENSIONS_LIST=(
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "caffeine@patapon.info"
+        "clipboard-indicator@tudmotu.com"
+        "dash-to-dock@micxgx.gmail.com"
+        "hidetopbar@mathieu.bidon.ca"
+        "lockscreen-extension@pratap.fastmail.fm"
+        "mediacontrols@cliffniff.github.com"
+        "openweather-extension@penguin-teal.github.io"
+    )
+
+    # Install extensions
+    for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
+        echo "Checking if $EXTENSION is installed..."
+        if gnome-extensions list | grep -q "$EXTENSION"; then
+            echo "$EXTENSION is already installed. Enabling..."
+        else
+            echo "Installing $EXTENSION..."
+            gnome-extensions install "$EXTENSION" || echo "Failed to install $EXTENSION"
         fi
+        
+        # Enable extensions
+        gnome-extensions enable "$EXTENSION" || echo "Failed to enable $EXTENSION"
     done
+else
+    echo "gnome-extensions command not found. Make sure GNOME Shell Extensions are installed."
 fi
+
 
 # Apply Spicetify Theme
 echo "Applying Spicetify theme..."
-mkdir -p ~/.config/spicetify/Themes
-cp -r "$DOTFILES_DIR/spicetify/"* ~/.config/spicetify/Themes/
 spicetify config current_theme Dribbblish Gruvbox
 spicetify apply
 pkill spotify || echo "Spotify was not running"
