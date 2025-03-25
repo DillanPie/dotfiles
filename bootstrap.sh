@@ -28,7 +28,7 @@ sudo pacman -S --needed --noconfirm base base-devel git wget curl zsh
 
 # Install the full GNOME desktop environment
 echo -e "${YELLOW}Installing the GNOME desktop environment...${RESET}"
-sudo pacman -S --needed --noconfirm gnome gnome-extra
+sudo pacman -S --needed --noconfirm gnome
 
 # Enable GDM (But do NOT start it yet)
 echo -e "${YELLOW}Enabling GDM (GNOME Display Manager)...${RESET}"
