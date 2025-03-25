@@ -41,36 +41,40 @@ echo "Installing GNOME Extensions..."
 EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
 mkdir -p "$EXTENSIONS_DIR"
 
-# Install extensions via extension manager if available
-if command -v gnome-extensions &> /dev/null; then
-    # List of extensions to install
-    EXTENSIONS_LIST=(
-        "appindicatorsupport@rgcjonas.gmail.com"
-        "caffeine@patapon.info"
-        "clipboard-indicator@tudmotu.com"
-        "dash-to-dock@micxgx.gmail.com"
-        "hidetopbar@mathieu.bidon.ca"
-        "lockscreen-extension@pratap.fastmail.fm"
-        "mediacontrols@cliffniff.github.com"
-        "openweather-extension@penguin-teal.github.io"
-    )
+# Install dependencies
+yay -S --needed --noconfirm gnome-shell-extension-manager gnome-browser-connector
 
-    # Install extensions
-    for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
-        echo "Checking if $EXTENSION is installed..."
-        if gnome-extensions list | grep -q "$EXTENSION"; then
-            echo "$EXTENSION is already installed. Enabling..."
-        else
-            echo "Installing $EXTENSION..."
-            gnome-extensions install "$EXTENSION" || echo "Failed to install $EXTENSION"
-        fi
-        
-        # Enable extensions
-        gnome-extensions enable "$EXTENSION" || echo "Failed to enable $EXTENSION"
-    done
-else
-    echo "gnome-extensions command not found. Make sure GNOME Shell Extensions are installed."
-fi
+# List of extensions to install
+EXTENSIONS_LIST=(
+    "appindicatorsupport@rgcjonas.gmail.com"
+    "caffeine@patapon.info"
+    "clipboard-indicator@tudmotu.com"
+    "dash-to-dock@micxgx.gmail.com"
+    "hidetopbar@mathieu.bidon.ca"
+    "lockscreen-extension@pratap.fastmail.fm"
+    "mediacontrols@cliffniff.github.com"
+    "openweather-extension@penguin-teal.github.io"
+)
+
+# Install and enable extensions
+for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
+    echo "Checking if $EXTENSION is installed..."
+    
+    if gnome-extensions list | grep -q "$EXTENSION"; then
+        echo "$EXTENSION is already installed. Enabling..."
+    else
+        echo "Downloading $EXTENSION from extensions.gnome.org..."
+        extension_id=$(echo "$EXTENSION" | awk -F'@' '{print $1}')
+        wget -O "/tmp/$extension_id.zip" "https://extensions.gnome.org/extension-data/$extension_id.shell-extension.zip"
+        gnome-extensions install "/tmp/$extension_id.zip" || echo "Failed to install $EXTENSION"
+    fi
+    
+    # Enable the extension
+    gnome-extensions enable "$EXTENSION" || echo "Failed to enable $EXTENSION"
+done
+
+echo "GNOME Extensions installed and enabled!"
+
 
 echo "Installing GNOME dependencies from the AUR..."
 
@@ -87,29 +91,30 @@ mkdir -p ~/.themes ~/.icons ~/.local/share/fonts
 
 echo "Setting up GNOME themes, icons, fonts, and cursors..."
 
-# Apply GNOME theme settings
-gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "Gruvbox-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
-gsettings set org.gnome.desktop.interface font-name "FiraCode Nerd Font 11"
-gsettings set org.gnome.desktop.interface document-font-name "FiraCode Nerd Font 11"
-gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Font Mono 10"
-gsettings set org.gnome.desktop.interface font-hinting "none"
-gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-gsettings set org.gnome.desktop.interface accent-color "green"
+# Apply GNOME theme settings after login
+dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
+dbus-launch gsettings set org.gnome.desktop.wm.preferences theme "Gruvbox-Dark"
+dbus-launch gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+dbus-launch gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
+dbus-launch gsettings set org.gnome.desktop.interface font-name "FiraCode Nerd Font 11"
+dbus-launch gsettings set org.gnome.desktop.interface document-font-name "FiraCode Nerd Font 11"
+dbus-launch gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Font Mono 10"
+dbus-launch gsettings set org.gnome.desktop.interface font-hinting "none"
+dbus-launch gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+dbus-launch gsettings set org.gnome.desktop.interface accent-color "green"
 
 # Enable animations
-gsettings set org.gnome.desktop.interface enable-animations true
+dbus-launch gsettings set org.gnome.desktop.interface enable-animations true
 
 # Hide battery percentage
-gsettings set org.gnome.desktop.interface show-battery-percentage false
+dbus-launch gsettings set org.gnome.desktop.interface show-battery-percentage false
 
 echo "GNOME theme and appearance setup completed!"
 
-# Restart GNOME Shell for changes to take effect
-echo "Restarting GNOME Shell..."
-gnome-session-quit --reboot
+
+echo "Restarting GNOME Shell in 5 seconds..."
+sleep 5
+killall -3 gnome-shell
 
 # Apply Spicetify Theme
 echo "Applying Spicetify theme..."
