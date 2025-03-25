@@ -154,4 +154,29 @@ mkdir -p "$HOME/.oh-my-zsh/custom/themes"
 cp "$DOTFILES_DIR/oh-my-zsh/theme/gruvbox.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/gruvbox.zsh-theme"
 cp "$DOTFILES_DIR/oh-my-zsh/.zshrc" "$HOME/.zshrc"
 
+echo "Setting up desktop wallpaper..."
+
+# Define wallpaper paths
+WALLPAPER_SOURCE="$DOTFILES_DIR/wallpaper.png"
+WALLPAPER_DEST="$HOME/Pictures/wallpaper.png"
+
+# Ensure Pictures directory exists
+mkdir -p "$HOME/Pictures"
+
+# Copy wallpaper if it exists
+if [ -f "$WALLPAPER_SOURCE" ]; then
+    cp "$WALLPAPER_SOURCE" "$WALLPAPER_DEST"
+    echo "Wallpaper copied to $WALLPAPER_DEST"
+
+    # Apply wallpaper using GNOME settings
+    dbus-launch gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER_DEST"
+    dbus-launch gsettings set org.gnome.desktop.background picture-uri-dark "file://$WALLPAPER_DEST"
+    dbus-launch gsettings set org.gnome.desktop.background picture-options "zoom"
+
+    echo "Wallpaper applied successfully!"
+else
+    echo "⚠️ Wallpaper not found at $WALLPAPER_SOURCE. Skipping..."
+fi
+
+
 echo "Dotfiles and configurations applied successfully! 🎉"
