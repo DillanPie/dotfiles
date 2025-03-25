@@ -80,16 +80,38 @@ echo "Installing GNOME dependencies from the AUR..."
 
 # Install GNOME dependencies and themes using yay
 yay -S --needed --noconfirm \
+    tweaks\
     papirus-icon-theme \
-    gruvbox-gtk-theme \
     bibata-cursor-theme \
-    ttf-firacode-nerd \
-    gnome-shell-extension-manager
+    ttf-firacode-nerd
 
 # Ensure required directories exist
 mkdir -p ~/.themes ~/.icons ~/.local/share/fonts
 
 echo "Setting up GNOME themes, icons, fonts, and cursors..."
+echo "Downloading and installing Gruvbox GTK Theme..."
+
+# Define theme download location
+GTK_THEME_REPO="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git"
+GTK_THEME_DIR="$HOME/.themes/Gruvbox-Dark"
+
+# Ensure the themes directory exists
+mkdir -p "$HOME/.themes"
+
+# Check if the theme is already installed
+if [ -d "$GTK_THEME_DIR" ]; then
+    echo "Gruvbox GTK Theme is already installed. Pulling latest changes..."
+    cd "$GTK_THEME_DIR" && git pull
+else
+    echo "Cloning Gruvbox GTK Theme..."
+    git clone --depth 1 "$GTK_THEME_REPO" "$GTK_THEME_DIR"
+fi
+
+# Apply the theme
+echo "Applying Gruvbox GTK Theme..."
+dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
+
+echo "Gruvbox GTK Theme installed and applied successfully!"
 
 # Apply GNOME theme settings after login
 dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
