@@ -37,28 +37,18 @@ done
 
 echo "Installing GNOME Extensions..."
 
-# Ensure extension directory exists
 EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
-mkdir -p "$EXTENSIONS_DIR"
 
-# Install dependencies
-yay -S --needed --noconfirm extension-manager gnome-browser-connector gnome-shell-extensions gnome-shell-extension-prefs
+# Ensure necessary directories exist
+mkdir -p "$BACKUP_DIR" "$EXTENSIONS_DIR"
 
-# Install extensions from AUR (recommended for stability)
-EXTENSIONS_AUR_LIST=(
-    "gnome-shell-extension-appindicator"
-    "gnome-shell-extension-dash-to-dock"
-    "gnome-shell-extension-clipboard-indicator"
-    "gnome-shell-extension-caffeine"
-    "gnome-shell-extension-mediacontrols"
-    "gnome-shell-extension-openweather"
-    "gnome-shell-extension-hidetopbar"
-)
+echo "Starting dotfiles installation..."
 
-echo "Installing GNOME Extensions from AUR..."
-yay -S --needed --noconfirm "${EXTENSIONS_AUR_LIST[@]}"
+# 🖥️ **Enable GNOME Extensions Support**
+echo "Enabling user GNOME extensions..."
+gsettings set org.gnome.shell disable-user-extensions false
 
-# Enable installed extensions
+# 🧩 **GNOME Extensions to Install**
 EXTENSIONS_LIST=(
     "appindicatorsupport@rgcjonas.gmail.com"
     "dash-to-dock@micxgx.gmail.com"
@@ -69,21 +59,35 @@ EXTENSIONS_LIST=(
     "hidetopbar@mathieu.bidon.ca"
 )
 
+echo "Installing GNOME Extensions from extensions.gnome.org..."
+for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
+    EXTENSION_NAME=$(echo "$EXTENSION" | awk -F'@' '{print $1}')
+    EXTENSION_ID=$(curl -s "https://extensions.gnome.org/extension-query/?search=$EXTENSION_NAME" | jq -r '.extensions[0].id')
+
+    if [ -z "$EXTENSION_ID" ] || [ "$EXTENSION_ID" == "null" ]; then
+        echo "⚠️ Could not find $EXTENSION on extensions.gnome.org. Skipping..."
+        continue
+    fi
+
+    echo "Downloading $EXTENSION..."
+    wget -O "/tmp/$EXTENSION_NAME.zip" "https://extensions.gnome.org/extension-data/$EXTENSION_NAME.shell-extension.zip"
+
+    echo "Installing $EXTENSION..."
+    gnome-extensions install "/tmp/$EXTENSION_NAME.zip" || echo "⚠️ Failed to install $EXTENSION"
+done
+
+# ✅ **Enable Installed Extensions**
 echo "Enabling GNOME Extensions..."
 for EXTENSION in "${EXTENSIONS_LIST[@]}"; do
     if gnome-extensions list | grep -q "$EXTENSION"; then
-        echo "$EXTENSION is installed. Enabling..."
+        echo "Enabling $EXTENSION..."
         gnome-extensions enable "$EXTENSION" || echo "⚠️ Failed to enable $EXTENSION"
     else
-        echo "⚠️ Extension $EXTENSION is missing! Check if it was installed properly."
+        echo "⚠️ $EXTENSION is missing! Check if it was installed properly."
     fi
 done
 
 echo "GNOME Extensions installed and enabled successfully!"
-
-
-
-echo "Installing GNOME dependencies from the AUR..."
 
 # Install GNOME dependencies and themes using yay
 yay -S --needed --noconfirm \
@@ -140,11 +144,6 @@ dbus-launch gsettings set org.gnome.desktop.interface show-battery-percentage fa
 
 echo "GNOME theme and appearance setup completed!"
 
-
-echo "Restarting GNOME Shell in 5 seconds..."
-sleep 5
-killall -3 gnome-shell
-
 # Apply Spicetify Theme
 echo "Applying Spicetify theme..."
 spicetify config current_theme Dribbblish Gruvbox
@@ -185,5 +184,9 @@ else
     echo "⚠️ Wallpaper not found at $WALLPAPER_SOURCE. Skipping..."
 fi
 
+# ✅ **Restart GNOME Shell**
+echo "Restarting GNOME Shell..."
+sleep 5
+killall -3 gnome-shell || echo "⚠️ Failed to restart GNOME Shell. Try logging out and back in."
 
 echo "Dotfiles and configurations applied successfully! 🎉"
