@@ -72,6 +72,44 @@ else
     echo "gnome-extensions command not found. Make sure GNOME Shell Extensions are installed."
 fi
 
+echo "Installing GNOME dependencies from the AUR..."
+
+# Install GNOME dependencies and themes using yay
+yay -S --needed --noconfirm \
+    papirus-icon-theme \
+    gruvbox-gtk-theme \
+    bibata-cursor-theme \
+    ttf-firacode-nerd \
+    gnome-shell-extension-manager
+
+# Ensure required directories exist
+mkdir -p ~/.themes ~/.icons ~/.local/share/fonts
+
+echo "Setting up GNOME themes, icons, fonts, and cursors..."
+
+# Apply GNOME theme settings
+gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Gruvbox-Dark"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
+gsettings set org.gnome.desktop.interface font-name "FiraCode Nerd Font 11"
+gsettings set org.gnome.desktop.interface document-font-name "FiraCode Nerd Font 11"
+gsettings set org.gnome.desktop.interface monospace-font-name "FiraCode Nerd Font Mono 10"
+gsettings set org.gnome.desktop.interface font-hinting "none"
+gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+gsettings set org.gnome.desktop.interface accent-color "green"
+
+# Enable animations
+gsettings set org.gnome.desktop.interface enable-animations true
+
+# Hide battery percentage
+gsettings set org.gnome.desktop.interface show-battery-percentage false
+
+echo "GNOME theme and appearance setup completed!"
+
+# Restart GNOME Shell for changes to take effect
+echo "Restarting GNOME Shell..."
+gnome-session-quit --reboot
 
 # Apply Spicetify Theme
 echo "Applying Spicetify theme..."
