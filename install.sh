@@ -116,8 +116,7 @@ GTK_THEME_DIR="$HOME/.themes/Gruvbox-Dark"
 cd $HOME/.themes
 git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
 
-cd Gruvbox-GTK-Theme
-cd themes
+cd Gruvbox-GTK-Theme/themes
 ./build.sh
 ./gtkrc.sh
 .install.sh

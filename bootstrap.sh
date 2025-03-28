@@ -46,7 +46,7 @@ fi
 
 # Install AUR packages via yay
 echo -e "${YELLOW}Installing AUR packages (Spotify, Spicetify, Fastfetch, Extension Manager)...${RESET}"
-yay -S --needed --noconfirm spotify spicetify-cli fastfetch extension-manager
+yay -S --needed --noconfirm spotify spicetify-cli fastfetch extension-manager jq
 
 # Install Oh-My-Zsh if not installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
