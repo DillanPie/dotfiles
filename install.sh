@@ -113,17 +113,15 @@ echo "Downloading and installing Gruvbox GTK Theme..."
 GTK_THEME_REPO="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git"
 GTK_THEME_DIR="$HOME/.themes/Gruvbox-Dark"
 
-# Ensure the themes directory exists
-mkdir -p "$HOME/.themes"
+cd $HOME/.themes
+git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
 
-# Check if the theme is already installed
-if [ -d "$GTK_THEME_DIR" ]; then
-    echo "Gruvbox GTK Theme is already installed. Pulling latest changes..."
-    cd "$GTK_THEME_DIR" && git pull
-else
-    echo "Cloning Gruvbox GTK Theme..."
-    git clone --depth 1 "$GTK_THEME_REPO" "$GTK_THEME_DIR"
-fi
+cd Gruvbox-GTK-Theme
+cd themes
+./build.sh
+./gtkrc.sh
+.install.sh
+cd
 
 echo "Gruvbox GTK Theme installed and applied successfully!"
 
