@@ -119,7 +119,7 @@ git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
 cd Gruvbox-GTK-Theme/themes
 ./build.sh
 ./gtkrc.sh
-.install.sh
+./install.sh
 cd
 
 echo "Gruvbox GTK Theme installed and applied successfully!"
