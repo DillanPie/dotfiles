@@ -45,6 +45,7 @@ EXTENSIONS=(
     gnome-shell-extension-caffeine
     gnome-shell-extension-clipboard-indicator
     gnome-shell-extension-openweatherrefined
+    gnome-shell-extension-hidetopbar-git
 )
 
 # Install extensions using yay
