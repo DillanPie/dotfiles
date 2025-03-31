@@ -35,70 +35,36 @@ for dir in "${DIRECTORIES[@]}"; do
     ln -sfn "$DOTFILES_DIR/$dir" "$TARGET_DIR"
 done
 
-echo "Installing GNOME Extensions..."
+echo "Installing GNOME Extensions from the AUR..."
 
-GNOME_EXT_LIST="$DOTFILES_DIR/gnome/extensions"
-USER_EXT_DIR="$HOME/.local/share/gnome-shell/extensions"
-GNOME_CONFIG="$DOTFILES_DIR/gnome/gnome-settings.conf"
+# List of extensions to install from the AUR
+EXTENSIONS=(
+    gnome-shell-extension-dash-to-dock
+    gnome-shell-extension-appindicator
+    gnome-shell-extension-user-themes
+    gnome-shell-extension-caffeine
+    gnome-shell-extension-clipboard-indicator
+    gnome-shell-extension-openweatherrefined
+)
 
-# Ensure the extension directory exists
-mkdir -p "$USER_EXT_DIR"
+# Install extensions using yay
+yay -S --needed --noconfirm "${EXTENSIONS[@]}"
 
-# Ensure required GNOME extension tools are installed
-sudo pacman -S --needed --noconfirm gnome-shell-extensions
+echo "✅ GNOME Extensions installed successfully!"
 
-echo "🔍 Reading GNOME Extensions from $GNOME_EXT_LIST..."
-
-if [ ! -d "$GNOME_EXT_LIST" ]; then
-    echo "❌ No GNOME extensions directory found in $GNOME_EXT_LIST!"
-    exit 1
-fi
-
-# 🧩 **Find and Install Extensions from extensions.gnome.org**
-for EXTENSION in "$GNOME_EXT_LIST"/*; do
-    EXTENSION_NAME=$(basename "$EXTENSION")
-
-    echo "🔎 Searching for $EXTENSION_NAME on extensions.gnome.org..."
-    EXTENSION_UUID=$(curl -s "https://extensions.gnome.org/extension-query/?search=$EXTENSION_NAME" | jq -r '.extensions[0].uuid')
-
-    if [ -z "$EXTENSION_UUID" ] || [ "$EXTENSION_UUID" == "null" ]; then
-        echo "⚠️ Could not find $EXTENSION_NAME on extensions.gnome.org! Skipping..."
-        continue
-    fi
-
-    EXTENSION_URL="https://extensions.gnome.org/extension-data/${EXTENSION_UUID}.shell-extension.zip"
-
-    echo "📥 Downloading $EXTENSION_NAME ($EXTENSION_UUID) from $EXTENSION_URL..."
-    wget -O "/tmp/$EXTENSION_NAME.zip" "$EXTENSION_URL"
-
-    echo "📦 Installing $EXTENSION_NAME..."
-    gnome-extensions install "/tmp/$EXTENSION_NAME.zip" || echo "⚠️ Failed to install $EXTENSION_NAME"
-done
-
-# ✅ **Enable Installed Extensions**
-echo "✅ Enabling GNOME Extensions..."
-for EXTENSION in "$GNOME_EXT_LIST"/*; do
-    EXTENSION_NAME=$(basename "$EXTENSION")
-    EXTENSION_UUID=$(curl -s "https://extensions.gnome.org/extension-query/?search=$EXTENSION_NAME" | jq -r '.extensions[0].uuid')
-
-    if [ -n "$EXTENSION_UUID" ] && gnome-extensions list | grep -q "$EXTENSION_UUID"; then
-        echo "✅ Enabling $EXTENSION_NAME ($EXTENSION_UUID)..."
-        gnome-extensions enable "$EXTENSION_UUID" || echo "⚠️ Failed to enable $EXTENSION_NAME"
+# Enable installed extensions
+for EXT in "${EXTENSIONS[@]}"; do
+    EXT_NAME=$(echo "$EXT" | sed 's/gnome-shell-extension-//')
+    if gnome-extensions list | grep -q "$EXT_NAME"; then
+        echo "✅ Enabling $EXT_NAME..."
+        gnome-extensions enable "$EXT_NAME"
     else
-        echo "⚠️ Extension $EXTENSION_NAME ($EXTENSION_UUID) is missing or not recognized!"
+        echo "⚠️ Could not find installed extension $EXT_NAME!"
     fi
 done
 
-echo "🎉 GNOME Extensions installed and enabled successfully!"
+echo "🎉 GNOME Extensions are now installed and enabled!"
 
-# 🛠 **Apply GNOME Settings from `gnome-settings.conf`**
-if [ -f "$GNOME_CONFIG" ]; then
-    echo "⚙ Applying GNOME settings from $GNOME_CONFIG..."
-    dconf load / < "$GNOME_CONFIG"
-    echo "✅ GNOME settings applied successfully!"
-else
-    echo "⚠️ No GNOME settings file found at $GNOME_CONFIG!"
-fi
 
 # Install GNOME dependencies and themes
 yay -S --needed --noconfirm \
