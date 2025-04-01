@@ -139,6 +139,17 @@ else
     echo "⚠️ Wallpaper not found at $WALLPAPER_SOURCE. Skipping..."
 fi
 
+# Apply Spicetify theme
+echo "Applying Spicetify theme..."
+spicetify config current_theme Dribbblish gruvbox
+spicetify apply
+
+# Ensure Zsh is the default shell
+echo "Changing default shell to Zsh..."
+cp .dotfiles/oh-my-zsh/theme/gruvbox.zsh-theme .oh-my-zsh/custom/themes/gruvbox.zsh-theme
+cp .dotfiles/oh-my-zsh/.zshrc ~/
+chsh -s $(which zsh)
+
 echo "GNOME theme and appearance setup completed!"
 
 # ✅ **Restart GNOME Shell**
