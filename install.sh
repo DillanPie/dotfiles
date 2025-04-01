@@ -115,6 +115,30 @@ gsettings set org.gnome.desktop.interface enable-animations true
 # Hide battery percentage
 gsettings set org.gnome.desktop.interface show-battery-percentage false
 
+echo "Setting up desktop wallpaper..."
+
+# Define wallpaper paths
+WALLPAPER_SOURCE="$HOME/.dotfiles/wallpaper.png"
+WALLPAPER_DEST="$HOME/Pictures/wallpaper.png"
+
+# Ensure Pictures directory exists
+mkdir -p "$HOME/Pictures"
+
+# Copy wallpaper if it exists
+if [ -f "$WALLPAPER_SOURCE" ]; then
+    cp "$WALLPAPER_SOURCE" "$WALLPAPER_DEST"
+    echo "Wallpaper copied to $WALLPAPER_DEST"
+
+    # Apply wallpaper using GNOME settings
+    dbus-launch gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER_DEST"
+    dbus-launch gsettings set org.gnome.desktop.background picture-uri-dark "file://$WALLPAPER_DEST"
+    dbus-launch gsettings set org.gnome.desktop.background picture-options "zoom"
+
+    echo "✅ Wallpaper applied successfully!"
+else
+    echo "⚠️ Wallpaper not found at $WALLPAPER_SOURCE. Skipping..."
+fi
+
 echo "GNOME theme and appearance setup completed!"
 
 # ✅ **Restart GNOME Shell**
