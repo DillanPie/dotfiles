@@ -24,7 +24,7 @@ sudo pacman -Syu --noconfirm
 
 # Install essential packages (Base + AUR Support + GNOME)
 echo -e "${YELLOW}Installing base system and essential packages...${RESET}"
-sudo pacman -S --needed --noconfirm base base-devel git wget curl zsh
+sudo pacman -S --needed --noconfirm base base-devel git wget curl zsh firefox
 
 # Install the full GNOME desktop environment
 echo -e "${YELLOW}Installing the GNOME desktop environment...${RESET}"
@@ -46,7 +46,7 @@ fi
 
 # Install AUR packages via yay
 echo -e "${YELLOW}Installing AUR packages (Spotify, Spicetify, Fastfetch, Extension Manager)...${RESET}"
-yay -S --needed --noconfirm spotify spicetify-cli fastfetch extension-manager jq
+yay -S --needed --noconfirm spotify spicetify-cli fastfetch extension-manager jq fzf
 
 # Install Oh-My-Zsh if not installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
